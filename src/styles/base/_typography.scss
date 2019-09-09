@@ -1,0 +1,62 @@
+@font-face {
+  font-family: ProximaNovaRegular;
+  src: url("/assets/fonts/ProximaNova-Regular.otf");
+}
+
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url("/assets/fonts/ProximaNova-Bold.otf");
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url("/assets/fonts/Proxima-Light.otf");
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url("/assets/fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url("/assets/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url("/assets/fonts/OpenSans-Bold.ttf");
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
