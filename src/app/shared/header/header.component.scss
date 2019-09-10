@@ -1,0 +1,91 @@
+@import "../../../styles/main.scss";
+
+.header {
+  &__top {
+    background: $gray-color-text;
+    .flex {
+      @include flex-center;
+      min-height: 5rem;
+    }
+    &--left {
+      @include flex-center;
+    }
+    &--right {
+      select {
+        color: $color-background-primary;
+        border: none;
+        outline: none;
+        background: url() no-repeat right
+        $gray-color-text;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    }
+    &--box {
+      padding: 1rem 6rem 1rem 0;
+      i {
+        color: $orange-color-text;
+        float: left;
+        padding-right: 1rem;
+        font-size: 3.1rem;
+      }
+    }
+    &--p {
+      color: $color-background-primary;
+      font-family: ProximaNovaBold, sans-serif;
+      line-height: 1.6rem;
+    }
+    &--heading {
+      color: $orange-color-text;
+      font-family: ProximaNovaBold, sans-serif;
+      line-height: 1.6rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__language{
+    margin-right:2.5rem;
+  }
+  &__search{
+    background: $color-gray-hover;
+    color:$color-background-primary;
+    outline: none;
+    border:none;
+    height:5rem;
+    width: 5rem;
+    font-size: 1.4rem;
+  }
+  &__bottom {
+    background: $color-background-primary;
+    &--nav {
+      nav.navbar {
+        padding: 0;
+        li.nav-item {
+          font-family: ProximaNovaBold;
+          &:not(:last-child) {
+            padding: 0 1.2rem;
+          }
+          a.nav-link {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 0;
+            &:link,
+            &:visited {
+              color: $gray-color-text;
+              transition: all 0.3s;
+            }
+            &:hover {
+              color: $orange-color-text;
+            }
+          }
+        }
+      }
+    }
+    .flex {
+      @include flex-center;
+      min-height: 8rem;
+    }
+  }
+}
