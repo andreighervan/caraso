@@ -1,0 +1,68 @@
+@import "../../../styles/main.scss";
+
+.popular-cars {
+    padding: 6rem 0;
+    .car__heading {
+      color: $gray-color-text;
+      span {
+        color: $orange-color-text;
+      }
+    }
+  
+    .car {
+      h4.heading--price {
+        position: absolute;
+        color: $color-white;
+        background: $orange-color-text;
+        right: 0;
+        bottom: 2rem;
+        padding: 0.4rem 1.4rem;
+      }
+      figcaption {
+        .subheading {
+          text-transform: uppercase;
+          margin: 1.8rem 0;
+        }
+        p.paragraph {
+          font-family: OpenSansRegular, Arial, sans-serif;
+          color: $color-grey-tertiary;
+          margin-top: -.2rem;
+          margin-bottom:1rem;
+        }
+        i {
+          color: $color-white;
+          background: $color-gray-secondary;
+          border-radius: 50%;
+          height: 2rem;
+          width: 2rem;
+          font-size: 1.1rem;
+          padding: 0.4rem 0.5rem;
+          margin-right: 1rem;
+        }
+        .right-car{
+          margin-left: 6rem;
+        }
+      }
+      .w-270{
+        width: 27rem;
+      }
+    }
+    .btn-show-all{
+      border:1px solid $gray-color-text;
+      background: $color-white;
+      padding: 1.5rem 4rem;
+      border-radius: 4px;
+      line-height: 1;
+      margin-top:4rem;
+      i{
+        color:$orange-color-text;
+        font-size: 1.4rem;
+      }
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        background: darken($color-white, 10%);
+      }
+    }
+  }

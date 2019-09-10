@@ -1,0 +1,43 @@
+@import "../../../styles/main.scss";
+
+.posts{
+    padding: 6rem 0;
+    h2.posts__heading {
+      color: $gray-color-text;
+      span {
+        color: $orange-color-text;
+      }
+    }
+    img.search__img{
+        margin-bottom:5rem;
+    }
+    .post{
+        figcaption{
+            padding: 2rem;
+            background: $color-grey-fourth;
+            i{
+                color:$orange-color-text;
+                margin-right: .5rem;
+            }
+            hr{
+                background: $orange-color-text;
+            }
+            p{
+                color:$color-grey-tertiary;
+                margin-right:1.5rem;
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom:-35px;
+        li{
+            height: .7rem;
+            border-radius: 0;
+            transform: skewX(-25deg);
+            background-color:$color-grey-fifth;
+            &.active{
+                background-color: $orange-color-text;
+            }
+        }
+    }
+}
