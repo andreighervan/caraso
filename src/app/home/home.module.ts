@@ -10,9 +10,11 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { PostsComponent } from './posts/posts.component';
+import { PartnersComponent } from './partners/partners.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
-  declarations: [HomeComponent, CtaComponent, PopularCarsComponent, SearchComponent, SliderComponent, TestimonialsComponent, PostsComponent],
+  declarations: [HomeComponent, CtaComponent, PopularCarsComponent, SearchComponent, SliderComponent, TestimonialsComponent, PostsComponent, PartnersComponent, MapComponent],
   imports: [
     CommonModule,
     SharedModule,

@@ -1,0 +1,9 @@
+@import "../../../styles/main.scss";
+
+.partners{
+    background: $color-grey-fourth;
+    padding:6rem 0;
+    .row>div{
+        text-align: center;
+    }
+}
