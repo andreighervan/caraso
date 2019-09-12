@@ -1,0 +1,26 @@
+@import "../../../styles/main.scss";
+
+.contact {
+    position:relative;
+    top:-11rem;
+  .container {
+    background: $orange-color-text;
+    .contact-us {
+        text-align: center;
+        padding: 5rem 0;
+      i {
+        color: $gray-color-text;
+      }
+      p {
+          text-transform: uppercase;
+        &.first-p {
+          color: $gray-color-text;
+          margin:1rem 0 1rem 0;
+        }
+        &.second-p {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
