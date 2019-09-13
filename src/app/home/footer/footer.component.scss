@@ -1,0 +1,70 @@
+@import "../../../styles/main.scss";
+
+footer {
+  .top-footer {
+    background: $gray-color-text;
+    position: relative;
+    // top:-20rem;
+    padding: 15rem 0 7rem 0;
+    z-index: 100;
+    .box {
+      p {
+        color: $color-gray-secondary;
+      }
+      h5 {
+        text-transform: uppercase;
+        color: $orange-color-text;
+        font-style: italic;
+        margin-bottom: 3rem;
+        span {
+          color: $color-white;
+        }
+      }
+      .social-links {
+        background: $color-gray-hover;
+        margin-top: 2rem;
+        ul.list-social-media {
+          li {
+            height: 2rem;
+            width: 2rem;
+            display: inline-block;
+            margin-right: 1rem;
+            a {
+              i {
+                color: $color-gray-secondary;
+              }
+            }
+          }
+        }
+      }
+      .contact {
+        i {
+          color: $orange-color-text;
+          margin-right: 0.5rem;
+        }
+      }
+      form.newsletter-form {
+        input {
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    background: $color-gray-hover;
+    .footer-content{
+        min-height: 7rem;
+        p{
+            color:$color-gray-secondary;
+        }
+        .nav-footer {
+            li {
+              display: inline-block;
+              margin-left: 2rem;
+              a{
+                  color:$color-white;
+              }
+            }
+          }
+    }
+  }
+}
