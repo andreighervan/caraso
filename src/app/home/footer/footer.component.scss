@@ -51,20 +51,20 @@ footer {
   }
   .bottom-footer {
     background: $color-gray-hover;
-    .footer-content{
-        min-height: 7rem;
-        p{
-            color:$color-gray-secondary;
-        }
-        .nav-footer {
-            li {
-              display: inline-block;
-              margin-left: 2rem;
-              a{
-                  color:$color-white;
-              }
-            }
+    .footer-content {
+      min-height: 7rem;
+      p {
+        color: $color-gray-secondary;
+      }
+      .nav-footer {
+        li {
+          display: inline-block;
+          margin-left: 2rem;
+          a {
+            color: $color-white;
           }
+        }
+      }
     }
   }
 }
