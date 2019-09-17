@@ -1,0 +1,28 @@
+@import "../../../styles/main.scss";
+
+/*#111416*/
+
+.breadcrumb {
+  padding: 5rem 0;
+  background: #111416;
+  h1.heading-breadcrumb {
+    text-transform: uppercase;
+    color: $color-white;
+    span {
+      color: $orange-color-text;
+    }
+  }
+  .breadcrumb-list {
+    .breadcrumb-icon {
+      i {
+        color: $orange-color-text;
+      }
+    }
+    li {
+      a {
+        color: $color-white;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
