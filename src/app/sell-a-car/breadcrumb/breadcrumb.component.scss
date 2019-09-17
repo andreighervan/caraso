@@ -1,10 +1,8 @@
 @import "../../../styles/main.scss";
 
-/*#111416*/
-
 .breadcrumb {
   padding: 5rem 0;
-  background: #111416;
+  background: $color-black-one;
   h1.heading-breadcrumb {
     text-transform: uppercase;
     color: $color-white;

@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SellACarRoutingModule } from './sell-a-car-routing.module';
 import { SellACarComponent } from './sell-a-car.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SectionSellACarComponent } from './section-sell-a-car/section-sell-a-car.component';
 
 
 @NgModule({
-  declarations: [SellACarComponent, BreadcrumbComponent],
+  declarations: [SellACarComponent,
+    SectionSellACarComponent,
+    BreadcrumbComponent],
   imports: [
     CommonModule,
     SellACarRoutingModule

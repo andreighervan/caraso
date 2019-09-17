@@ -1,0 +1,23 @@
+@import "../../../styles/main.scss";
+
+.sell-a-car {
+  .sidebar {
+    background: $color-black-one;
+    padding: 3rem;
+    color: $color-white;
+    hr {
+      background: $orange-color-text;
+    }
+    h3 {
+      text-transform: uppercase;
+      span {
+        color: $orange-color-text;
+      }
+    }
+    .contact-details {
+      i {
+        color: $orange-color-text;
+      }
+    }
+  }
+}
