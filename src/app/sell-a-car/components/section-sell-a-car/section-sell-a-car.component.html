@@ -1,0 +1,125 @@
+<section class="sell-a-car">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="sidebar">
+                    <h3>Sell <span>your car</span></h3>
+                    <hr />
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam,
+                        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                        semper.
+                    </p>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum tortor quam,
+                        feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                        semper.
+                    </p>
+                    <div class="d-flex justify-content-start contact-details">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <div class="contact-box">
+                            <p>Email</p>
+                            <p>automotor@domain.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start contact-details">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-box">
+                            <p>Phone</p>
+                            <p>090-481-9986/090-481-9985</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start contact-details">
+                        <i class="fas fa-globe-americas"></i>
+                        <div class="contact-box">
+                            <p>Location</p>
+                            <p>45 Queen's Park Rd, Brighton, UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 contact">
+                <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                    <mat-step [stepControl]="firstFormGroup">
+                        <form [formGroup]="sellACarForm">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="make">Make <span>*</span></label>
+                                        <input type="text" formControlName="make" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="model">Model <span>*</span></label>
+                                        <input type="text" formControlName="model" />
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="body">Body</label>
+                                        <input type="text" formControlName="body" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="transmision">Transmision</label>
+                                        <input type="text" formControlName="transmision" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="mileage">Mileage</label>
+                                        <input type="text" formControlName="mileage" />
+                                    </div>
+                                </div>
+                            
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="year">Year</label>
+                                        <input type="text" formControlName="year" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="exteriorColor">Exterior color</label>
+                                        <input type="text" formControlName="exteriorColor" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="interiorColor">Interior color</label>
+                                        <input type="text" formControlName="interiorColor" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-field">
+                                        <label for="vin">Vin</label>
+                                        <input type="text" formControlName="vin" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-field">
+                                        <label for="pasteALink">Paste a link</label>
+                                        <input type="text" formControlName="pasteALink" />
+                                    </div>
+                                </div>
+                            </div>
+            <button type="submit" (click)="sendData()" matStepperNext>NEXT STEP</button>
+            </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                step 2
+            </mat-step>
+            </mat-horizontal-stepper>
+        </div>
+    </div>
+    </div>
+</section>

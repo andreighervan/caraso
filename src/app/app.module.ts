@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 import { SellACarModule } from './sell-a-car/sell-a-car.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SellACarModule } from './sell-a-car/sell-a-car.module';
     AppRoutingModule,
     SharedModule,
     SellACarModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

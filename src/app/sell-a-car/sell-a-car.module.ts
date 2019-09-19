@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SellACarRoutingModule } from './sell-a-car-routing.module';
-import { SellACarComponent } from './sell-a-car.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { SectionSellACarComponent } from './section-sell-a-car/section-sell-a-car.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
+import { SellACarComponent } from './sell-a-car.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { SectionSellACarComponent } from './components/section-sell-a-car/section-sell-a-car.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SellACarComponent,
@@ -13,7 +15,10 @@ import { SectionSellACarComponent } from './section-sell-a-car/section-sell-a-ca
     BreadcrumbComponent],
   imports: [
     CommonModule,
-    SellACarRoutingModule
+    SellACarRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatStepperModule
   ]
 })
 export class SellACarModule { }
