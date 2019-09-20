@@ -40,10 +40,10 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                 <div class="contact">
-                    <mat-horizontal-stepper [linear]="isLinear" #stepper>
-                        <mat-step [stepControl]="firstFormGroup">
-                            <ng-template matStepLabel>1. Car Information</ng-template>
-                            <form [formGroup]="sellACarForm">
+                    <form [formGroup]="sellACarForm">
+                        <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                            <mat-step [stepControl]="sellACarForm">
+                                <ng-template matStepLabel>1. Car Information</ng-template>
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-field">
@@ -114,13 +114,55 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="submit-btn" (click)="sendData()" matStepperNext>NEXT STEP</button>
-                            </form>
-                        </mat-step>
-                        <mat-step [stepControl]="secondFormGroup">
-                            <ng-template matStepLabel>2. Contact Details</ng-template>
-                        </mat-step>
-                    </mat-horizontal-stepper>
+                                <button type="button" class="submit-btn" (click)="sendData()" matStepperNext>NEXT
+                                    STEP</button>
+                            </mat-step>
+                            <mat-step [stepControl]="secondFormGroup">
+                                <ng-template matStepLabel>2. Contact Details</ng-template>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label for="firstName">First Name <span>*</span></label>
+                                            <input type="text" id="firstName" formControlName="firstName" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label for="lastName">Last Name <span>*</span></label>
+                                            <input type="text" id-="lastName" formControlName="lastName" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label for="email">Email <span>*</span></label>
+                                            <input type="text" id="email" formControlName="email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label for="phone">Phone <span>*</span></label>
+                                            <input type="text" id="phone" formControlName="phone" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-field">
+                                            <label for="notes">Notes</label>
+                                            <textarea formControlName="notes" id="notes" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="submit-btn" (click)="sendDataFormTwo()" matStepperNext>SELL
+                                    MY
+                                    CAR</button>
+                                    <p class="note">By submitting this form, you will be requesting trade-in value at no obligation and will be contacted within 48 hours by
+                                    a sales representative.</p>
+                            </mat-step>
+                        </mat-horizontal-stepper>
+                    </form>
                 </div>
             </div>
         </div>

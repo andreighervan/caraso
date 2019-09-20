@@ -7,6 +7,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./section-sell-a-car.component.scss']
 })
 export class SectionSellACarComponent implements OnInit {
+  private isLinear: boolean;
   public sellACarForm: FormGroup;
 
   constructor(private fb: FormBuilder) { }
@@ -26,12 +27,21 @@ export class SectionSellACarComponent implements OnInit {
       interiorColor: [''],
       exteriorColor: [''],
       vin: [''],
-      pasteALink: ['']
+      pasteALink: [''],
+      firstName: ['', Validators.required],
+      lastName: [''],
+      email: [''],
+      phone: [''],
+      notes: ['']
     });
   }
 
   sendData() {
     return this.sellACarForm.value;
+  }
+
+  sendDataFormTwo() {
+    console.log(this.sellACarForm.value);
   }
 
 }

@@ -13,10 +13,9 @@ import { PostsComponent } from './posts/posts.component';
 import { PartnersComponent } from './partners/partners.component';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [HomeComponent, CtaComponent, PopularCarsComponent, SearchComponent, SliderComponent, TestimonialsComponent, PostsComponent, PartnersComponent, MapComponent, ContactComponent, FooterComponent],
+  declarations: [HomeComponent, CtaComponent, PopularCarsComponent, SearchComponent, SliderComponent, TestimonialsComponent, PostsComponent, PartnersComponent, MapComponent, ContactComponent],
   imports: [
     CommonModule,
     SharedModule,

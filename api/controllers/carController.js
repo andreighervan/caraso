@@ -1,6 +1,6 @@
 'use strict';
 
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
   Car = mongoose.model('Cars');
 
 exports.listAllCars = (req, res)=>{
@@ -12,7 +12,7 @@ exports.listAllCars = (req, res)=>{
 };
 
 exports.createACar = (req, res)=>{
-  let newCar = new Car(req.body);
+  const newCar = new Car(req.body);
   newCar.save((err, car)=>{
     if (err)
       res.send(err);

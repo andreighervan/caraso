@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var carList = require('../controllers/carController');
+  let carList = require('../controllers/carController');
 
   // carList Routes
   app.route('/cars')

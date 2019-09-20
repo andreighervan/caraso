@@ -1,8 +1,7 @@
-var express = require('express'),
+let express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    Task = require('./api/models/carModel'), //created model loading here
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
@@ -21,4 +20,4 @@ routes(app);
 
 app.listen(port);
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('Car Aso Marketplace RESTful API server started on: ' + port);
