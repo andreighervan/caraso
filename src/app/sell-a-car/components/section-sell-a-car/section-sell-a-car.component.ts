@@ -7,7 +7,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./section-sell-a-car.component.scss']
 })
 export class SectionSellACarComponent implements OnInit {
-  private isLinear: boolean;
+  public isLinear: boolean;
+  public secondStep: string;
   public sellACarForm: FormGroup;
 
   constructor(private fb: FormBuilder) { }

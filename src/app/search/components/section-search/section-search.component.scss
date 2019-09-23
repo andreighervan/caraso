@@ -1,12 +1,34 @@
-@import "../../../styles/main.scss";
+@import "../../../../styles/main.scss";
 
-.popular-cars {
+.search {
   padding: 6rem 0;
-  .car__heading {
+  .section-title {
     color: $gray-color-text;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-family: ProximaNovaBold, Arial, sans-serif;
     span {
       color: $orange-color-text;
     }
+  }
+  ::ng-deep ul.nav-tabs {
+    border-bottom: 2px solid $color-grey-fifth;
+    li {
+      a.nav-link {
+        font-family: ProximaNovaBold, Arial, sans-serif;
+        font-size: 1.4rem;
+        color: $color-gray-secondary;
+        border: none;
+        &.active {
+          color: $orange-color-text;
+          border-bottom: 2px solid $orange-color-text;
+        }
+      }
+    }
+  }
+
+  ::ng-deep .tab-content {
+    margin-top: 3rem;
   }
 
   .car {
@@ -47,7 +69,7 @@
     }
     .w-270 {
       width: 27rem;
-       h4.heading--price {
+      h4.heading--price {
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
     }
