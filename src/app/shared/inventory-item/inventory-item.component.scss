@@ -1,0 +1,18 @@
+.inventory-item {
+  .inventory-inner {
+    display: flex;
+    justify-content: start;
+    img.item-img {
+    }
+    .item-title-price {
+      width: 75%;
+      margin-left: 3.6%;
+      .item-title {
+        display: inline-block;
+      }
+      .item-price {
+        float: right;
+      }
+    }
+  }
+}
