@@ -1,12 +1,21 @@
 .inventory-item {
+  text-transform: uppercase;
   .inventory-inner {
-    display: flex;
-    justify-content: start;
-    img.item-img {
+    .item-title-img {
+      .item-img {
+        float: left;
+      }
     }
-    .item-title-price {
-      width: 75%;
-      margin-left: 3.6%;
+    .item-features {
+      display: flex;
+    }
+    .item-title-price,
+    .item-features {
+      padding-left: 3.6%;
+      .item-hr,
+      .item-title {
+        margin-left: 3.6%;
+      }
       .item-title {
         display: inline-block;
       }
