@@ -1,23 +1,46 @@
 .inventory-sidebar {
+  margin-top: 8rem;
+  padding: 2rem 4rem;
+  background: #22292d;
+  h3.invetory-sidebar-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    span {
+      color: #e57632;
+    }
+  }
   .select-wrapper {
-    border: 1px solid #ccc;
     width: 100%;
     border-radius: 3px;
     overflow: hidden;
-    background: #fafafa url("../../../assets/img/chevron-down.svg") no-repeat 90% 50%;
+    background: url("../../../assets/img/chevron-down.svg") no-repeat 90% 50%;
     & select {
       padding: 5px 8px;
       width: 100%;
-      border: none;
-      box-shadow: none;
-      background: transparent;
+      border:none;
+     // padding: 1rem 1.5rem;
       background-image: none;
+      border: none;
+    box-shadow: none;
       -webkit-appearance: none;
+      color: #a8a8a8;
+      background: #fff;
+      text-transform: uppercase;
+      font-family: ProximaNovaRegular, Arial, sans-serif;
+      /*padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;*/
     }
     & select:focus {
       outline: none;
     }
+    margin-bottom: 2rem;
+  }
+  .search-btn {
+    width: 100%;
   }
 }
-
-
