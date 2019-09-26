@@ -1,0 +1,23 @@
+.inventory-sidebar {
+  .select-wrapper {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("../../../assets/img/chevron-down.svg") no-repeat 90% 50%;
+    & select {
+      padding: 5px 8px;
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      background-image: none;
+      -webkit-appearance: none;
+    }
+    & select:focus {
+      outline: none;
+    }
+  }
+}
+
+
