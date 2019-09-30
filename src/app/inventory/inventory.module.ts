@@ -5,9 +5,9 @@ import { SharedModule } from '../shared/shared.module';
 
 import { InventoryRoutingModule } from './inventory-routing.module';
 import { InventoryComponent } from './inventory.component';
-import { InventorySidebarComponent } from './inventory-sidebar/inventory-sidebar.component';
-import { InventoryContentComponent } from './inventory-content/inventory-content.component';
-import { InventoryHeaderComponent } from './inventory-header/inventory-header.component';
+import { InventorySidebarComponent } from './components/inventory-sidebar/inventory-sidebar.component';
+import { InventoryContentComponent } from './components/inventory-content/inventory-content.component';
+import { InventoryHeaderComponent } from './components/inventory-header/inventory-header.component';
 
 
 @NgModule({

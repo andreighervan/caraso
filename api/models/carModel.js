@@ -5,8 +5,7 @@ const Schema = mongoose.Schema;
 
 let CarSchema = new Schema({
   name: {
-    type: String,
-    required: 'Kindly enter the name of the car'
+    type: String
   }
 });
 

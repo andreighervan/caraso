@@ -2,20 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SliderComponent } from './slider/slider.component';
-import { SearchComponent } from './search/search.component';
-import { PopularCarsComponent } from './popular-cars/popular-cars.component';
-import { CtaComponent } from './cta/cta.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { SearchComponent } from './components/search/search.component';
+import { PopularCarsComponent } from './components/popular-cars/popular-cars.component';
+import { CtaComponent } from './components/cta/cta.component';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../shared/shared.module';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { PostsComponent } from './posts/posts.component';
-import { PartnersComponent } from './partners/partners.component';
-import { MapComponent } from './map/map.component';
-import { ContactComponent } from './contact/contact.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { PartnersComponent } from './components/partners/partners.component';
+import { MapComponent } from './components/map/map.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
-  declarations: [HomeComponent, CtaComponent, PopularCarsComponent, SearchComponent, SliderComponent, TestimonialsComponent, PostsComponent, PartnersComponent, MapComponent, ContactComponent],
+  declarations: [HomeComponent, CtaComponent, PopularCarsComponent,
+    SearchComponent, SliderComponent, TestimonialsComponent,
+    PostsComponent, PartnersComponent, MapComponent, ContactComponent],
   imports: [
     CommonModule,
     SharedModule,
