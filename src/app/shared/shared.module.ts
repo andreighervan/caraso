@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { RouterModule } from '@angular/router';
 
-import { HeaderComponent } from './components/header/header.component';
-import { SharedComponent } from './shared.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
-import { InventoryItemComponent } from './components/inventory-item/inventory-item.component';
+import * as fromComponents from './components';
 
 @NgModule({
-  declarations: [HeaderComponent, SharedComponent, FooterComponent, BreadcrumbComponent, InventoryItemComponent],
+  declarations: [...fromComponents.components],
   imports: [
     CommonModule,
     CarouselModule,
-    WavesModule
+    WavesModule,
+    RouterModule
   ],
-  exports: [HeaderComponent, FooterComponent, BreadcrumbComponent, InventoryItemComponent, CommonModule]
+  exports: [...fromComponents.components, CommonModule, RouterModule]
 })
 export class SharedModule { }

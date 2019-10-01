@@ -47,7 +47,7 @@
     }
     .w-270 {
       width: 27rem;
-       h4.heading--price {
+      h4.heading--price {
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
     }
@@ -68,6 +68,29 @@
     }
     &:hover {
       background: darken($color-white, 10%);
+    }
+  }
+  ngb-tabset ul {
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+    border-bottom: none;
+    li {
+      color: #666666;
+      text-transform: uppercase;
+      a.nav-link .active,
+      a.nav-link {
+        border: none;
+        line-height: 3rem;
+        padding: 0 2rem;
+      }
+      a.nav-link .active {
+        color: #ffffff;
+        background: #e57632;
+      }
+      a.nav-link {
+        color: #666666;
+        background: #e0e0e0;
+      }
     }
   }
 }

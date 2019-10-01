@@ -1,3 +1,5 @@
+@import "../../../../styles/main.scss";
+
 .inventory-item {
   text-transform: uppercase;
   .inventory-inner {
@@ -12,16 +14,47 @@
     .item-title-price,
     .item-features {
       padding-left: 3.6%;
+      .item-left,.item-center {
+        i {
+          color: $color-white;
+          background: $color-gray-secondary;
+          border-radius: 50%;
+          height: 2rem;
+          width: 2rem;
+          font-size: 1.1rem;
+          text-align: center;
+          line-height: 2rem;
+          margin-right: 1rem;
+        }
+        p{
+          color:#22292d;
+          font-size: 1.4rem;
+          font-family: ProximaNovaBold, Arial, sans-serif;
+        }
+      }
+      .ml-item-center{
+        margin-left:72px;
+      }
       .item-hr,
       .item-title {
         margin-left: 3.6%;
       }
       .item-title {
         display: inline-block;
+        font-family: ProximaNovaBold, Arial, sans-serif;
       }
       .item-price {
         float: right;
       }
+      .item-paragraph{
+        color:#aeaeae;
+        font-size: 1.2rem;
+        font-family: ProximaNovaBold, Arial, sans-serif;
+      }
     }
+  }
+  .item-hr{
+    width: 64%;
+    float: right;
   }
 }
