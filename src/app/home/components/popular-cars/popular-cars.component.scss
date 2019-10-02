@@ -70,7 +70,7 @@
       background: darken($color-white, 10%);
     }
   }
-  ngb-tabset ul {
+  ::ng-deep ngb-tabset ul {
     margin-bottom: 6rem;
     margin-top: 4rem;
     border-bottom: none;
@@ -82,8 +82,9 @@
         border: none;
         line-height: 3rem;
         padding: 0 2rem;
+        font-family: ProximaNovaBold, Arial, sans-serif;
       }
-      a.nav-link .active {
+      a.active {
         color: #ffffff;
         background: #e57632;
       }
