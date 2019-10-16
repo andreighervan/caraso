@@ -1,12 +1,20 @@
 @import "../../../../styles/main.scss";
 
 .testimonials {
+  display:flex;
+  justify-content:start;
+  @media (max-width: 990px) {
+      display: block;
+    }
   .left-ts {
     padding: 5rem 0;
     background: $orange-color-text;
     width: 50%;
     padding-left: 5%;
     padding-right: 7.7%;
+    @media (max-width: 990px) {
+      width: 100%;
+    }
     .ts__heading--1 {
       color: $color-black;
       span {
@@ -43,6 +51,9 @@
     background: $gray-color-secondary;
     width: 50%;
     padding-left: 8%;
+    @media (max-width: 990px) {
+      width: 100%;
+    }
     .ts__heading--2 {
       color: $orange-color-text;
       span {
@@ -64,8 +75,8 @@
       .testimonial-footer {
         display: flex;
         align-items: flex-start;
-        margin-top:1.5rem;
-        img{
+        margin-top: 1.5rem;
+        img {
           margin-right: 1rem;
         }
         .author {
