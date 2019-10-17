@@ -11,4 +11,5 @@ export class CarService {
   getCars() {
     return this.firestore.collection('cars').snapshotChanges();
   }
+
 }
