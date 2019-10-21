@@ -117,4 +117,37 @@
       min-height: 8rem;
     }
   }
+  .dropdown {
+    position: relative;
+    a {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding: 0;
+      color: $gray-color-text;
+      display:block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding: 0;
+      color: $gray-color-text;
+      z-index:10;
+      background: $color-white;
+      width: 100%;
+      padding:1rem;
+      ul {
+        li {
+          list-style-type: none;
+          a {
+            color: $gray-color-text;
+          }
+        }
+      }
+    }
+    &:hover .dropdown-content {
+      display: block;
+    }
+  }
 }
