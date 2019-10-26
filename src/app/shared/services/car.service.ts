@@ -12,4 +12,11 @@ export class CarService {
     return this.firestore.collection('cars').snapshotChanges();
   }
 
+  createCar(value) {
+    return this.firestore.collection('cars').add({
+      carName: value.name,
+      carYear: value.year
+    });
+  }
+
 }

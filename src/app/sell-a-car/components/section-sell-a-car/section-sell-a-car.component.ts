@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
   selector: 'app-section-sell-a-car',
@@ -11,7 +12,8 @@ export class SectionSellACarComponent implements OnInit {
   public secondStep: string;
   public sellACarForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+              private carService: CarService) { }
 
   ngOnInit() {
     this.buildSellACarForm();
@@ -37,11 +39,15 @@ export class SectionSellACarComponent implements OnInit {
     });
   }
 
-  sendData() {
-    return this.sellACarForm.value;
+  onSubmit(value) {
+    this.carService.createCar(value)
+      .then(
+        res => {
+        }
+      );
   }
 
-  sendDataFormTwo() {
+  onSubmitTwo() {
     console.log(this.sellACarForm.value);
   }
 

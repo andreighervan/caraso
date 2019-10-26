@@ -8,6 +8,7 @@ import { SellACarComponent } from './sell-a-car.component';
 import { SectionSellACarComponent } from './components/section-sell-a-car/section-sell-a-car.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { CarService } from '../shared/services/car.service';
 
 @NgModule({
   declarations: [SellACarComponent,
@@ -19,6 +20,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     MatStepperModule,
     SharedModule
-  ]
+  ],
+  providers: [CarService]
 })
 export class SellACarModule { }
