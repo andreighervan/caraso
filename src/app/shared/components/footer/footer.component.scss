@@ -21,17 +21,20 @@ footer {
         }
       }
       .social-links {
-        background: $color-gray-hover;
         margin-top: 2rem;
         ul.list-social-media {
           li {
-            height: 2rem;
-            width: 2rem;
             display: inline-block;
-            margin-right: 1rem;
             a {
+              margin-right: 1rem;
               i {
                 color: $color-gray-secondary;
+                background: $color-gray-hover;
+                height: 4rem;
+                width: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                font-size: 1.4rem;
               }
             }
           }
@@ -44,7 +47,22 @@ footer {
         }
       }
       form.newsletter-form {
-        input {
+        margin-bottom: 1rem;
+        input[type="email"] {
+          color: #aeaeae;
+          background: #343c40;
+          border: none;
+          width: 90%;
+          padding: 0.5rem 1.5rem;
+          outline: none;
+        }
+        button[type="submit"] {
+          padding: 0.5rem 1.5rem;
+          background: #343c40;
+          border: none;
+          width: 30px;
+          width: 10%;
+          padding-right: 2.5rem;
         }
       }
     }

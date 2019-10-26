@@ -8,6 +8,15 @@
       color: $orange-color-text;
     }
   }
+  .col-3{
+    margin:0 auto;
+    @media (max-width:1200px){
+      max-width: 50%;
+    }
+    @media (max-width:600px){
+      max-width: 100%;
+    }
+  }
 
   .car {
     h4.heading--price {
@@ -77,20 +86,23 @@
     li {
       color: #666666;
       text-transform: uppercase;
+      margin-right:5px;
+      border-radius:5px;
+      font-family: ProximaNovaBold, Arial, sans-serif;
       a.nav-link .active,
       a.nav-link {
         border: none;
         line-height: 3rem;
         padding: 0 2rem;
-        font-family: ProximaNovaBold, Arial, sans-serif;
-      }
-      a.active {
-        color: #ffffff;
-        background: #e57632;
       }
       a.nav-link {
         color: #666666;
         background: #e0e0e0;
+        border-radius:4px;
+        &.active {
+        color: #ffffff;
+        background: #e57632;
+      }
       }
     }
   }
