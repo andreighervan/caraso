@@ -10,7 +10,6 @@ import { LoginInnerComponent } from './components/login-inner/login-inner.compon
 import { RegisterInnerComponent } from './components/register-inner/register-inner.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [AuthComponent, LoginComponent, RegisterComponent, LoginInnerComponent, RegisterInnerComponent],
   imports: [
@@ -18,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     AuthRoutingModule,
     SharedModule,
     FormsModule
-  ]
+  ],
+  exports: [LoginComponent, RegisterComponent]
 })
 export class AuthModule { }

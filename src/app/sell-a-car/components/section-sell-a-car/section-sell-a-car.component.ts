@@ -8,18 +8,20 @@ import { CarService } from 'src/app/shared/services/car.service';
   styleUrls: ['./section-sell-a-car.component.scss']
 })
 export class SectionSellACarComponent implements OnInit {
-  public isLinear: boolean;
-  public secondStep: string;
-  public sellACarForm: FormGroup;
+  isLinear: boolean;
+  secondStep: string;
+  sellACarForm: FormGroup;
+  sellACarFormSecond: FormGroup;
 
   constructor(private fb: FormBuilder,
               private carService: CarService) { }
 
   ngOnInit() {
     this.buildSellACarForm();
+    this.buildSellACarFormSecond();
   }
 
-  public buildSellACarForm() {
+  buildSellACarForm() {
     this.sellACarForm = this.fb.group({
       make: ['', Validators.required],
       year: [''],
@@ -30,7 +32,12 @@ export class SectionSellACarComponent implements OnInit {
       interiorColor: [''],
       exteriorColor: [''],
       vin: [''],
-      pasteALink: [''],
+      pasteALink: ['']
+    });
+  }
+
+  buildSellACarFormSecond() {
+    this.sellACarFormSecond = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
       email: [''],
@@ -47,8 +54,12 @@ export class SectionSellACarComponent implements OnInit {
       );
   }
 
-  onSubmitTwo() {
-    console.log(this.sellACarForm.value);
+  onSubmitSecond(value) {
+    this.carService.createCarSecond(value)
+      .then(
+        res => {
+        }
+      );
   }
 
 }

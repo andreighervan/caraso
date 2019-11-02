@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Car } from '../models/car';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,28 @@ export class CarService {
     return this.firestore.collection('cars').snapshotChanges();
   }
 
-  createCar(value) {
+  createCar(value: Car) {
     return this.firestore.collection('cars').add({
-      carName: value.name,
-      carYear: value.year
+      make: value.make,
+      year: value.year,
+      mileage: value.mileage,
+      model: value.model,
+      transmision: value.transmision,
+      body: value.body,
+      interiorColor: value.interiorColor,
+      exteriorColor: value.exteriorColor,
+      vin: value.vin,
+      pasteALink: value.pasteALink
+    });
+  }
+
+  createCarSecond(value: Car) {
+    return this.firestore.collection('cars').add({
+      firstName: value.firstName,
+      lastName: value.lastName,
+      email: value.email,
+      year: value.year,
+      phone: value.phone
     });
   }
 

@@ -38,9 +38,9 @@
             </aside>
             <div class="col-right">
                 <div class="contact">
-                    <form [formGroup]="sellACarForm" #carForm>
-                        <mat-horizontal-stepper [linear]="isLinear" #stepper>
-                            <mat-step [stepControl]="sellACarForm">
+                    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                        <mat-step [stepControl]="sellACarForm">
+                            <form [formGroup]="sellACarForm" (ngSubmit)="onSubmit(sellACarForm.value)">
                                 <ng-template matStepLabel>1. Car Information</ng-template>
                                 <div class="row">
                                     <div class="col-sm-4">
@@ -112,10 +112,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="submit-btn" (click)="onSubmit(carForm.value)" matStepperNext>NEXT
+                                <button type="submit" class="submit-btn" [disabled]="!sellACarForm.valid" matStepperNext>NEXT
                                     STEP</button>
-                            </mat-step>
-                            <mat-step [stepControl]="secondStep">
+                            </form>
+                        </mat-step>
+                        <mat-step [stepControl]="secondStep">
+                            <form [formGroup]="sellACarFormSecond"
+                                (ngSubmit)="onSubmitSecond(sellACarFormSecond.value)">
                                 <ng-template matStepLabel>2. Contact Details</ng-template>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -153,15 +156,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="submit-btn" (click)="onSubmitTwo()" matStepperNext>SELL
-                                    MY
-                                    CAR</button>
-                                <p class="note">By submitting this form, you will be requesting trade-in value at no
-                                    obligation and will be contacted within 48 hours by
-                                    a sales representative.</p>
-                            </mat-step>
-                        </mat-horizontal-stepper>
-                    </form>
+                                <button type="submit" class="submit-btn" [disabled]="!sellACarFormSecond.valid" matStepperNext>
+                                    SELL MY CAR</button>
+                            </form>
+                            <p class="note">By submitting this form, you will be requesting trade-in value at no
+                                obligation and will be contacted within 48 hours by
+                                a sales representative.</p>
+                        </mat-step>
+                    </mat-horizontal-stepper>
                 </div>
             </div>
         </div>

@@ -95,6 +95,24 @@
             &:hover {
               color: $orange-color-text;
             }
+            &.login,
+            &.register {
+              border-radius: 10px;
+              height: 3rem;
+              line-height: 3rem;
+              color: $color-white;
+              padding: 0 1rem;
+              margin-top:-5px;
+              &:hover{
+                opacity: .7;
+              }
+            }
+            &.login {
+              background: $green-color;
+            }
+            &.register {
+              background: $orange-color-text;
+            }
             .cart {
               position: absolute;
               top: -8px;
@@ -124,7 +142,7 @@
       text-transform: uppercase;
       padding: 0;
       color: $gray-color-text;
-      display:block;
+      display: block;
     }
     .dropdown-content {
       display: none;
@@ -133,10 +151,10 @@
       text-transform: uppercase;
       padding: 0;
       color: $gray-color-text;
-      z-index:10;
+      z-index: 10;
       background: $color-white;
       width: 100%;
-      padding:1rem;
+      padding: 1rem;
       ul {
         li {
           list-style-type: none;

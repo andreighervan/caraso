@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -25,7 +26,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     SharedModule,
     SellACarModule,
     HomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireAuthModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
