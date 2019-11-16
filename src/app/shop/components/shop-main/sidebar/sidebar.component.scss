@@ -1,0 +1,94 @@
+@import "../../../../../styles/main.scss";
+
+.shop-sidebar {
+  .form-sidebar {
+    form {
+      display: flex;
+      justify-content: flex-start;
+      height: 5rem;
+      width: 100%;
+      .form-input {
+        width: 90%;
+        font-size: 1.4rem;
+        padding: 2rem;
+        line-height: 1;
+        color: $color-grey-tertiary;
+        border-top: 1px solid $color-grey-fifth;
+        border-left: 1px solid $color-grey-fifth;
+        border-bottom: 1px solid $color-grey-fifth;
+        border-right: none;
+        border-top-left-radius: 4px 4px;
+        border-bottom-left-radius: 4px 4px;
+        outline: none;
+      }
+      .btn-submit {
+        background: none;
+        float: right;
+        border: none;
+        outline: none;
+        border-top: 1px solid $color-grey-fifth;
+        border-right: 1px solid $color-grey-fifth;
+        border-bottom: 1px solid $color-grey-fifth;
+        border-top-right-radius: 4px 4px;
+        border-bottom-right-radius: 4px 4px;
+        width: 4rem;
+        i {
+          color: $orange-color-text;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .shop-category {
+    padding-top: 5rem;
+    h6.category-item {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      a {
+        color: $color-grey-tertiary;
+        padding-left: 5px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:before {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        color: $orange-color-text;
+        font-size: inherit;
+      }
+    }
+  }
+  .shop-best-seller {
+    padding-top: 5rem;
+    .shop-bs-item {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      img.bs-img {
+        border: 1px solid $color-grey-fifth;
+        margin-right: 2rem;
+      }
+      .shop-bs-right {
+        i {
+          color: $orange-color-text;
+          margin-top:1.5rem;
+        }
+        h6.shop-bs-price{
+            color:$color-gray-secondary;
+            margin-top:1.4rem;
+            line-height: 1;;
+        }
+      }
+    }
+  }
+  hr {
+    color: $color-grey-fifth;
+    margin-top: 2rem;
+  }
+  h5.category-title {
+    color: $gray-color-text;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
