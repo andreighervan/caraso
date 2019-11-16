@@ -13,12 +13,15 @@ import { AppComponent } from './app.component';
 import { SellACarModule } from './sell-a-car/sell-a-car.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AuthModule } from './auth/auth.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
+    CoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     BrowserModule,
@@ -27,7 +30,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     SellACarModule,
     HomeModule,
     BrowserAnimationsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AuthModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
