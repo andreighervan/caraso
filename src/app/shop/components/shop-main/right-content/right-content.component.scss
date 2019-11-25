@@ -56,8 +56,8 @@
       padding: 2rem;
       background: $color-white;
       margin-bottom: 3rem;
-      &:hover{
-        box-shadow: 0 5px 10px 0 $color-grey-seven,0 5px 10px 0 $color-grey-seven;
+      &:hover {
+        box-shadow: 0 5px 10px 0 $color-grey-seven, 0 5px 10px 0 $color-grey-seven;
         cursor: pointer;
       }
       figure {
@@ -103,6 +103,29 @@
           &:hover {
             background: $orange-color-text;
             color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  .shop-navigation {
+    margin-top: 6rem;
+    nav {
+      ul.pagination {
+        li {
+          a.page-link {
+            font-size: 1.6rem;
+            color: $color-grey-tertiary;
+            background: transparent;
+            height: 5rem;
+            width: 5rem;
+            padding: 0;
+            line-height: 5rem;
+            border: 1px solid $color-grey-fifth;
+            &:hover {
+              background: $orange-color-text;
+              color: $color-white;
+            }
           }
         }
       }

@@ -11,3 +11,39 @@
   justify-content: space-between;
   align-items: center;
 }
+
+// Define default font size
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin background-gradient($start-color, $end-color, $orientation) { 
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+ //Usage:
+ //$start-color, $end-color, $orientation - vertical/horizontal/radial
+ /*.foo {
+    @include background-gradient(red, black, 'vertical');
+  }
+  //Output
+  .foo {
+    background: -webkit-linear-gradient(top, red, black);
+    background: linear-gradient(to bottom, red, black);
+  }*/
