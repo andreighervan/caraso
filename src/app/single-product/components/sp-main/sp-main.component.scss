@@ -1,0 +1,59 @@
+@import "main.scss";
+
+.related-products{
+    .item {
+      padding: 2rem;
+      background: $color-white;
+      margin-bottom: 3rem;
+      &:hover {
+        box-shadow: 0 5px 10px 0 $color-grey-seven, 0 5px 10px 0 $color-grey-seven;
+        cursor: pointer;
+      }
+      figure {
+        font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+        text-align: center;
+        .item-img {
+          margin: 0 auto;
+          height: 200px;
+          max-width: 100%;
+          margin-bottom: 1rem;
+        }
+        figcaption {
+          text-align: left;
+          font-style: italic;
+          h5.item-title {
+            color: $gray-color-text;
+            margin-bottom: 1.5rem;
+            &:hover {
+              color: $orange-color-text;
+            }
+          }
+          hr.hr-item {
+            background: $orange-color-text;
+          }
+        }
+      }
+      .item-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5.item-price {
+          color: $orange-color-text;
+          font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
+        }
+        .btn-cart {
+          width: 30px;
+          height: 30px;
+          color: $gray-color-text;
+          background: $color-white;
+          border: 1px solid $orange-color-text;
+          border-radius: 3px;
+          cursor: pointer;
+          &:hover {
+            background: $orange-color-text;
+            color: $color-white;
+          }
+        }
+      }
+    }
+}

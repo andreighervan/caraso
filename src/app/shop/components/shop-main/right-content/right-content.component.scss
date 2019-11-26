@@ -1,4 +1,4 @@
-@import "../../../../../styles/main.scss";
+@import "main.scss";
 
 .shop-right-content {
   .top-content {
@@ -109,10 +109,11 @@
     }
   }
   .shop-navigation {
-    margin-top: 6rem;
+    margin-top: 3rem;
     nav {
       ul.pagination {
         li {
+          text-align: center;
           a.page-link {
             font-size: 1.6rem;
             color: $color-grey-tertiary;

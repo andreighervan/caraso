@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'search', loadChildren: () => import('./search/search.module').then(m => m.SearchModule) },
   { path: 'inventory', loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule) },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) }
+  { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) },
+  { path: 'single-product', loadChildren: () => import('./single-product/single-product.module').then(m => m.SingleProductModule) }
 ];
 
 @NgModule({
