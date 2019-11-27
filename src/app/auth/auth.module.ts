@@ -18,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     FormsModule
   ],
-  exports: [LoginComponent, RegisterComponent]
+  exports: [LoginComponent, RegisterComponent, LoginInnerComponent]
 })
 export class AuthModule { }

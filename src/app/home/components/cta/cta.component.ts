@@ -15,6 +15,7 @@ export class CtaComponent implements OnInit {
 
   navigateToSellACar() {
     this.router.navigateByUrl('/sell-a-car');
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
 }
