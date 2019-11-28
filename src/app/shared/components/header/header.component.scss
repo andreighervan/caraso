@@ -83,7 +83,7 @@
           &:not(:last-child) {
             padding: 0 1.2rem;
           }
-          a.nav-link {
+          a.nav-link, button.nav-link {
             font-size: 1.4rem;
             text-transform: uppercase;
             padding: 0;
@@ -103,6 +103,8 @@
               color: $color-white;
               padding: 0 1rem;
               margin-top:-5px;
+              border:none;
+              outline: none;
               &:hover{
                 opacity: .7;
               }

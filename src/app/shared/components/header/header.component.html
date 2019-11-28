@@ -79,10 +79,10 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link login" data-toggle="modal" data-target="#login">Login</a>
+                <button class="nav-link login" (click)="openLogin()">Login</button>
               </li>
               <li class="nav-item">
-                <a class="nav-link register" routerLink="/auth/register">Register</a>
+                <button class="nav-link register" (click)="openRegister()">Register</button>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i><span class="cart">1</span></a>
