@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AuthService } from '../../services/auth.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,42 +9,22 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  errorMessage: string;
-  successMessage: string;
+  authError: any;
 
-  // login form
-  public loginForm: FormGroup;
-
-  constructor(public dialogRef: MatDialogRef<LoginComponent>,
-              public authService: AuthService,
-              private fb: FormBuilder) { }
+  constructor(private auth: AuthService,
+              public dialogRef: MatDialogRef<LoginComponent>) { }
 
   ngOnInit() {
-    this.buildLoginForm();
+    this.auth.eventAuthError$.subscribe(data => {
+      this.authError = data;
+    });
+  }
+
+  login(frm) {
+    this.auth.login(frm.value.email, frm.value.password);
   }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
-
-  tryLogin(value) {
-    this.authService.doRegister(value)
-      .then(res => {
-        console.log(res);
-        this.errorMessage = '';
-        this.successMessage = 'Your account has been created';
-      }, err => {
-        console.log(err);
-        this.errorMessage = err.message;
-        this.successMessage = '';
-      });
-  }
-
-  buildLoginForm() {
-    this.loginForm = this.fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
-    });
-  }
-
 }

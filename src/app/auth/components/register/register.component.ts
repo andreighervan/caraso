@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -8,12 +9,22 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<RegisterComponent>) { }
+  authError: any;
+
+  constructor(public dialogRef: MatDialogRef<RegisterComponent>,
+              private auth: AuthService) { }
 
   ngOnInit() {
+    this.auth.eventAuthError$.subscribe(data => {
+      this.authError = data;
+    });
   }
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  createUser(frm) {
+    this.auth.createUser(frm.value);
   }
 }

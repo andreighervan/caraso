@@ -1,19 +1,35 @@
-<!-- Modal -->
-<div class="login-modal">
-    <form [formGroup]="loginForm">
-        <div class="form-group">
-            <label>Email address</label>
-            <input type="email" formControlName="email" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" formControlName="password" required>
-            <label class="error">{{errorMessage}}</label>
-            <label class="success">{{successMessage}}</label>
-        </div>
-        <button type="submit" (click)="tryLogin(loginForm.value)" class="btn btn-default">Register</button>
-    </form>
-    <div mat-dialog-actions>
-        <button mat-button class="btn-close" (click)="onNoClick()">x</button>
+<div class="row">
+    <div class="col-12">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+
+            <div class="row" *ngIf="authError">
+                <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="email">Email</label>
+                    <input ngModel #email="ngModel" name="email" type="email" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <label for="password">Password</label>
+                    <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-12">
+                    <a href="/register">Click here to register</a>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </div>
+            </div>
+
+        </form>
     </div>
 </div>

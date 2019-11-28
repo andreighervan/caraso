@@ -21,8 +21,9 @@ import { CoreModule } from './core/core.module';
     AppComponent
   ],
   imports: [
-    CoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    CoreModule,
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +31,6 @@ import { CoreModule } from './core/core.module';
     SellACarModule,
     HomeModule,
     BrowserAnimationsModule,
-    AngularFireAuthModule,
     AuthModule
   ],
   providers: [AngularFirestore],
