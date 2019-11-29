@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { ThrowStmt } from '@angular/compiler';
 import { BehaviorSubject } from 'rxjs';
+import * as firebase from 'firebase/app';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  private eventAuthError = new BehaviorSubject<string>("");
+  private eventAuthError = new BehaviorSubject<string>('');
   eventAuthError$ = this.eventAuthError.asObservable();
 
   newUser: any;
@@ -20,12 +20,6 @@ export class AuthService {
 
   getUserState() {
     return this.afAuth.authState;
-  }
-
-  doFacebookLogin() {
-  }
-
-  doGoogleLogin() {
   }
 
   login(email: string, password: string) {
@@ -41,11 +35,9 @@ export class AuthService {
   }
 
   createUser(user) {
-    console.log(user);
     this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
       .then(userCredential => {
         this.newUser = user;
-        console.log(userCredential);
         userCredential.user.updateProfile({
           displayName: user.firstName + ' ' + user.lastName
         });
@@ -66,7 +58,34 @@ export class AuthService {
       firstname: this.newUser.firstName,
       lastname: this.newUser.lastName,
       role: 'network user'
-    })
+    });
+  }
+
+  doFacebookLogin() {
+    return new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      this.afAuth.auth
+        .signInWithPopup(provider)
+        .then(res => {
+          resolve(res);
+        }, err => {
+          console.log(err);
+          reject(err);
+        });
+    });
+  }
+
+  doGoogleLogin() {
+    return new Promise<any>((resolve, reject) => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('profile');
+      provider.addScope('email');
+      this.afAuth.auth
+        .signInWithPopup(provider)
+        .then(res => {
+          resolve(res);
+        });
+    });
   }
 
   logout() {

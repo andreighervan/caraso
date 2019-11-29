@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'inventory', loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule) },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) },
-  { path: 'single-product', loadChildren: () => import('./single-product/single-product.module').then(m => m.SingleProductModule) }
+  { path: 'single-product', loadChildren: () => import('./single-product/single-product.module').then(m => m.SingleProductModule) },
+  { path: 'contact-us', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule) }
 ];
 
 @NgModule({

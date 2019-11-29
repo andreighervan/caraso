@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
 
   openLogin(): void {
     const dialogRef = this.dialog.open(LoginComponent, {
-      width: '50%',
-      height: '70%'
+      width: '30%',
+      height: 'auto'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -28,8 +28,8 @@ export class HeaderComponent implements OnInit {
 
   openRegister(): void {
     const dialogRef = this.dialog.open(RegisterComponent, {
-      width: '50%',
-      height: '70%'
+      width: '30%',
+      height: 'auto'
     });
 
     dialogRef.afterClosed().subscribe(result => {

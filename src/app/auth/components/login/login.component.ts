@@ -27,4 +27,12 @@ export class LoginComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  doGoogleLogin() {
+    this.auth.doGoogleLogin();
+  }
+  doFacebookLogin() {
+    this.auth.doFacebookLogin();
+  }
+  
 }
