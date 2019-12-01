@@ -1,0 +1,107 @@
+@import "main.scss";
+
+.contact-main {
+  margin: 6rem 0;
+  .row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    .contact-form {
+      height: 100%;
+      background: $color-grey-fourth;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+      h2.contact-title {
+        color: $gray-color-text;
+        text-transform: uppercase;
+        padding-left: 3rem;
+        span {
+          color: $orange-color-text;
+        }
+      }
+      form {
+        padding: 0 3rem 0 3rem;
+        .form-group {
+          margin-bottom: 2.6rem;
+          label {
+            font-size: 1.4rem;
+            color: $gray-color-text;
+            font-family: OpenSansRegular, Arial, sans-serif;
+            text-transform: uppercase;
+            line-height: 1;
+            span {
+              color: $orange-color-text;
+            }
+          }
+          input,
+          textarea {
+            border-radius: 2px;
+            font-size: 1.5rem;
+            resize: none;
+          }
+          input {
+            height: 4rem;
+          }
+          textarea {
+            height: 14rem;
+          }
+        }
+        button.btn-submit {
+          background: $orange-color-text;
+          font-size: 1.4rem;
+          font-family: ProximaNovaBold, Arial, sans-serif;
+          text-transform: uppercase;
+          color: $color-white;
+          width: 14rem;
+          height: 4rem;
+          line-height: 4rem;
+          border-radius: 4px;
+          border: none;
+          outline: none;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    aside {
+      .sidebar-contact {
+        background: $color-grey-fourth;
+        height: 100%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        h2.contact-title {
+          color: $gray-color-text;
+          text-transform: uppercase;
+          padding-left: 3rem;
+          span {
+            color: $orange-color-text;
+          }
+        }
+        .contact-info {
+          display: flex;
+          justify-content: start;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          font-family: ProximaNovaBold, Arial, sans-serif;
+          margin-bottom: 3rem;
+          i {
+            font-size: 3.6rem;
+            color: $orange-color-text;
+            margin-right: 1.5rem;
+          }
+          .info {
+            text-transform: uppercase;
+            p.info-title {
+              color: $orange-color-text;
+              font-size: 1.2rem;
+            }
+            h6.info-text {
+              color: $gray-color-text;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,55 +1,102 @@
 <main class="contact-main">
     <div class="container">
-        <div class="col-md-8 col-sm-6">
-            <div class="contact-form">
-                <h2 class="contact-title">get in <span>touch</span></h2>
-                <form>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="firstName">First name <span>*</span></label>
-                                <input type="text" class="form-control" id="firstName" aria-describedby="firstName"
-                                    placeholder="Enter first name">
+        <div class="row row-flex">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h2 class="contact-title">get in <span>touch</span></h2>
+                    <hr class="hr-contact" />
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="firstName">First name <span>*</span></label>
+                                    <input type="text" class="form-control" id="firstName" aria-describedby="firstName"
+                                        placeholder="Enter first name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="lastName">Last name <span>*</span></label>
+                                    <input type="text" class="form-control" id="lastName" aria-describedby="lastName"
+                                        placeholder="Enter last name">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="lastName">Last name <span>*</span></label>
-                                <input type="text" class="form-control" id="lastName" aria-describedby="lastName"
-                                    placeholder="Enter last name">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email <span>*</span></label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="email"
+                                        placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone" aria-describedby="phone"
+                                        placeholder="Enter phone">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="email">Email <span>*</span></label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email"
-                                    placeholder="Enter email">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="message">Message <span>*</span></label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Your Message"></textarea>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="text" class="form-control" id="phone" aria-describedby="phone"
-                                    placeholder="Enter phone">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="message">Message <span>*</span></label>
-                                <textarea class="form-control" id="message" rows="5"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                        <button type="submit" class="btn-submit">Send</button>
+                    </form>
+                </div>
             </div>
+            <aside class="col-md-4">
+                <div class="sidebar-contact">
+                    <h2 class="contact-title">Contact <span>info</span></h2>
+                    <hr class="hr-contact" />
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <p class="info-title">Email</p>
+                            <h6 class="info-text">automotor@domain.com
+                                sales@domain.com</h6>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <div class="info">
+                            <p class="info-title">Phone</p>
+                            <h6 class="info-text">090-481-9986
+                            090-481-9985</h6>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map"></i>
+                        <div class="info">
+                            <p class="info-title">location</p>
+                            <h6 class="info-text">45 Queen's Park Rd, Brighton,
+                            united kingdom</h6>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <div class="info">
+                            <p class="info-title">sales department</p>
+                            <h6 class="info-text">Mon - sat: 8:00 - 17:00 pm
+                            sunday is closed</h6>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <div class="info">
+                            <p class="info-title">services department</p>
+                            <h6 class="info-text">Mon - sat: 8:00 - 17:00 pm
+                            sunday is closed</h6>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
-        <aside class="col-md-4 col-sm-6">
-
-        </aside>
     </div>
 </main>
