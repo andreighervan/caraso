@@ -5,20 +5,28 @@
                 <div class="contact-form">
                     <h2 class="contact-title">get in <span>touch</span></h2>
                     <hr class="hr-contact" />
-                    <form>
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmitContactInfo()" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="firstName">First name <span>*</span></label>
-                                    <input type="text" class="form-control" id="firstName" aria-describedby="firstName"
-                                        placeholder="Enter first name">
+                                    <input type="text" formControlName="firstName" class="form-control" id="firstName"
+                                        aria-describedby="firstName" placeholder="Enter first name">
+                                    <div *ngIf="submitted" class="validate-input"
+                                        [class.d-none]="!contactForm.controls.firstName.errors">
+                                        <p> {{ contactForm.controls.firstName | formFieldError }}</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="lastName">Last name <span>*</span></label>
-                                    <input type="text" class="form-control" id="lastName" aria-describedby="lastName"
-                                        placeholder="Enter last name">
+                                    <input type="text" formControlName="lastName" class="form-control" id="lastName"
+                                        aria-describedby="lastName" placeholder="Enter last name">
+                                    <div *ngIf="submitted" class="validate-input"
+                                        [class.d-none]="!contactForm.controls.lastName.errors">
+                                        <p> {{ contactForm.controls.lastName | formFieldError }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -26,15 +34,19 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email <span>*</span></label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="email"
-                                        placeholder="Enter email">
+                                    <input type="email" formControlName="email" class="form-control" id="email"
+                                        aria-describedby="email" placeholder="Enter email">
+                                    <div *ngIf="submitted" class="validate-input"
+                                        [class.d-none]="!contactForm.controls.email.errors">
+                                        <p> {{ contactForm.controls.email | formFieldError }}</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="phone">Phone</label>
-                                    <input type="text" class="form-control" id="phone" aria-describedby="phone"
-                                        placeholder="Enter phone">
+                                    <input type="text" formControlName="phone" class="form-control" id="phone"
+                                        aria-describedby="phone" placeholder="Enter phone">
                                 </div>
                             </div>
                         </div>
@@ -42,8 +54,12 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="message">Message <span>*</span></label>
-                                    <textarea class="form-control" id="message" rows="5"
+                                    <textarea formControlName="message" class="form-control" id="message" rows="5"
                                         placeholder="Your Message"></textarea>
+                                    <div *ngIf="submitted" class="validate-input"
+                                        [class.d-none]="!contactForm.controls.message.errors">
+                                        <p> {{ contactForm.controls.message | formFieldError }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +84,7 @@
                         <div class="info">
                             <p class="info-title">Phone</p>
                             <h6 class="info-text">090-481-9986
-                            090-481-9985</h6>
+                                090-481-9985</h6>
                         </div>
                     </div>
                     <div class="contact-info">
@@ -76,7 +92,7 @@
                         <div class="info">
                             <p class="info-title">location</p>
                             <h6 class="info-text">45 Queen's Park Rd, Brighton,
-                            united kingdom</h6>
+                                united kingdom</h6>
                         </div>
                     </div>
                     <div class="contact-info">
@@ -84,7 +100,7 @@
                         <div class="info">
                             <p class="info-title">sales department</p>
                             <h6 class="info-text">Mon - sat: 8:00 - 17:00 pm
-                            sunday is closed</h6>
+                                sunday is closed</h6>
                         </div>
                     </div>
                     <div class="contact-info">
@@ -92,7 +108,7 @@
                         <div class="info">
                             <p class="info-title">services department</p>
                             <h6 class="info-text">Mon - sat: 8:00 - 17:00 pm
-                            sunday is closed</h6>
+                                sunday is closed</h6>
                         </div>
                     </div>
                 </div>

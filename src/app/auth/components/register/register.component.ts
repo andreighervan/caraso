@@ -27,4 +27,8 @@ export class RegisterComponent implements OnInit {
   createUser(frm) {
     this.auth.createUser(frm.value);
   }
+
+  doFacebookLogin() { }
+  
+  doGoogleLogin(){}
 }

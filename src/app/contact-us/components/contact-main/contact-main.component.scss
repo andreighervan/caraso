@@ -44,6 +44,11 @@
           textarea {
             height: 14rem;
           }
+          .validate-input {
+            p {
+              color: $orange-color-text;
+            }
+          }
         }
         button.btn-submit {
           background: $orange-color-text;
