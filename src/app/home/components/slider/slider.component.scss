@@ -76,8 +76,11 @@
         height: 0.5rem;
         transform: skewX(-25deg);
         background-color: #e0e0e0;
+        border-width:0;
         &.active {
-          background: #e57632;
+          background: $orange-color-text;
+          height: 0.5rem;
+          border-width:0;
         }
       }
     }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
@@ -11,18 +11,49 @@ export class SectionSellACarComponent implements OnInit {
   isLinear: boolean;
   secondStep: string;
   sellACarForm: FormGroup;
-  sellACarFormSecond: FormGroup;
+  carInfoFormGroup: FormGroup;
+  carInfoFormGroupSecond: FormGroup;
 
   constructor(private fb: FormBuilder,
               private carService: CarService) { }
 
   ngOnInit() {
+    this.buildCarFormArray();
     this.buildSellACarForm();
     this.buildSellACarFormSecond();
   }
 
-  buildSellACarForm() {
+  /** Returns a FormArray with the name 'formArray'. */
+  get formArray(): AbstractControl | null { return this.sellACarForm.get('carFormArray'); }
+
+  buildCarFormArray() {
     this.sellACarForm = this.fb.group({
+      carFormArray: this.fb.array([
+        this.fb.group({
+          make: ['', Validators.required],
+          year: [''],
+          mileage: [''],
+          model: [''],
+          transmision: [''],
+          body: [''],
+          interiorColor: [''],
+          exteriorColor: [''],
+          vin: [''],
+          pasteALink: ['']
+        }),
+        this.fb.group({
+          firstName: ['', Validators.required],
+          lastName: [''],
+          email: [''],
+          phone: [''],
+          notes: ['']
+        }),
+      ])
+    });
+  }
+
+  buildSellACarForm() {
+    this.carInfoFormGroup = this.fb.group({
       make: ['', Validators.required],
       year: [''],
       mileage: [''],
@@ -37,7 +68,7 @@ export class SectionSellACarComponent implements OnInit {
   }
 
   buildSellACarFormSecond() {
-    this.sellACarFormSecond = this.fb.group({
+    this.carInfoFormGroupSecond = this.fb.group({
       firstName: ['', Validators.required],
       lastName: [''],
       email: [''],
@@ -48,14 +79,6 @@ export class SectionSellACarComponent implements OnInit {
 
   onSubmit(value) {
     this.carService.createCar(value)
-      .then(
-        res => {
-        }
-      );
-  }
-
-  onSubmitSecond(value) {
-    this.carService.createCarSecond(value)
       .then(
         res => {
         }

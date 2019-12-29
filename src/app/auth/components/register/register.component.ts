@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   authError: any;
 
   constructor(public dialogRef: MatDialogRef<RegisterComponent>,
-              private auth: AuthService) { }
+    private auth: AuthService) { }
 
   ngOnInit() {
     this.auth.eventAuthError$.subscribe(data => {
@@ -28,7 +28,12 @@ export class RegisterComponent implements OnInit {
     this.auth.createUser(frm.value);
   }
 
-  doFacebookLogin() { }
-  
-  doGoogleLogin(){}
+  doGoogleLogin() {
+    this.auth.doGoogleLogin();
+  }
+
+  doFacebookLogin() {
+    this.auth.doFacebookLogin();
+  }
+
 }

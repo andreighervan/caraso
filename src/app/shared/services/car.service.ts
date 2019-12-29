@@ -24,16 +24,10 @@ export class CarService {
       interiorColor: value.interiorColor,
       exteriorColor: value.exteriorColor,
       vin: value.vin,
-      pasteALink: value.pasteALink
-    });
-  }
-
-  createCarSecond(value: Car) {
-    return this.firestore.collection('cars').add({
+      pasteALink: value.pasteALink,
       firstName: value.firstName,
       lastName: value.lastName,
       email: value.email,
-      year: value.year,
       phone: value.phone
     });
   }
