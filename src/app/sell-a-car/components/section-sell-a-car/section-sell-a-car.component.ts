@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
@@ -17,14 +17,14 @@ export class SectionSellACarComponent implements OnInit {
   constructor(private fb: FormBuilder,
               private carService: CarService) { }
 
-  ngOnInit() {
-    this.buildCarFormArray();
-    this.buildSellACarForm();
-    this.buildSellACarFormSecond();
-  }
+  //ngOnInit() {
+    //this.buildCarFormArray();
+    //this.buildSellACarForm();
+    //this.buildSellACarFormSecond();
+  //}
 
   /** Returns a FormArray with the name 'formArray'. */
-  get formArray(): AbstractControl | null { return this.sellACarForm.get('carFormArray'); }
+  /*get carFormArray(): AbstractControl | null { return this.sellACarForm.get('carFormArray'); }
 
   buildCarFormArray() {
     this.sellACarForm = this.fb.group({
@@ -83,6 +83,26 @@ export class SectionSellACarComponent implements OnInit {
         res => {
         }
       );
+  }*/
+
+  title = 'Angular Material Stepper Example with single '
+    + 'Reactive form across mulitple child components';
+
+  registrationForm: FormGroup;
+
+  ngOnInit(): void {
+    this.registrationForm = new FormGroup({
+      'carDetails': new FormGroup({
+        'firstname': new FormControl(null, Validators.required),
+        'mi': new FormControl(null),
+        'lastname': new FormControl(null, Validators.required),
+      }),
+      'contactDetails': new FormGroup({
+        'email': new FormControl(null, [Validators.required, Validators.email]),
+        'phone': new FormControl(null)
+      })
+    });
+
   }
 
 }

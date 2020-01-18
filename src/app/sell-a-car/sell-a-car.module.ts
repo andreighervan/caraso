@@ -9,10 +9,14 @@ import { SectionSellACarComponent } from './components/section-sell-a-car/sectio
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { CarService } from '../shared/services/car.service';
+import { RegistrationStep1Component } from './components/registration-step1/registration-step1.component';
+import { RegistrationStep2Component } from './components/registration-step2/registration-step2.component';
 
 @NgModule({
   declarations: [SellACarComponent,
-    SectionSellACarComponent],
+    SectionSellACarComponent,
+    RegistrationStep1Component,
+    RegistrationStep2Component],
   imports: [
     CommonModule,
     SellACarRoutingModule,
