@@ -1,15 +1,48 @@
 <div id="contact-details" [formGroup]="regForm">
-    <div class="form-group col-md-4" formGroupName="contactDetails">
-        <label>Email*</label>
-        <input type="text" class="form-control" formControlName="email">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-field" formGroupName="contactDetails">
+                <label for="firstName">First Name <span>*</span></label>
+                <input type="text" id="firstName" formControlName="firstName" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-field" formGroupName="contactDetails">
+                <label for="lastName">Last Name <span>*</span></label>
+                <input type="text" id-="lastName" formControlName="lastName" />
+            </div>
+        </div>
     </div>
-    <div class="form-group col-md-4" formGroupName="contactDetails">
-        <label>Phone</label>
-        <input type="text" class="form-control" formControlName="phone">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-field" formGroupName="contactDetails">
+                <label for="email">Email <span>*</span></label>
+                <input type="text" id="email" formControlName="email" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-field" formGroupName="contactDetails">
+                <label for="phone">Phone <span>*</span></label>
+                <input type="text" id="phone" formControlName="phone" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-field" formGroupName="contactDetails">
+                <label for="notes">Notes</label>
+                <textarea formControlName="notes" id="notes" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-field">
+                <button type="button" class="submit-btn" (click)="submit()">SELL MY CAR</button>
+            </div>
+        </div>
     </div>
 </div>
-<br />
-<button type="button" matStepperPrevious>Back</button>
-&nbsp;
-<button type="button" matStepperNext (click)="step2Submitted()">Next</button>
-<button type="button" (click)="submit()">Submit</button>
+<p class="note">By submitting this form, you will be requesting trade-in value at no
+    obligation and will be contacted within 48 hours by
+    a sales representative.</p>

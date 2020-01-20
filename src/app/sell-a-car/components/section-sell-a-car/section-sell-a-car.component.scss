@@ -2,18 +2,10 @@
 
 .sell-a-car {
   padding: 6rem 0;
-  .sidebar {
+  aside {
     background: $color-black-one;
     padding: 3rem;
     color: $color-white;
-    width: 26%;
-    margin-right: 3rem;
-    @media (max-width: 1200px) {
-      width: 30%;
-    }
-    @media (max-width: 992px) {
-      width: 36%;
-    }
     hr {
       background: $orange-color-text;
     }
@@ -36,15 +28,6 @@
           color: $orange-color-text;
         }
       }
-    }
-  }
-  .col-right {
-    width: 71%;
-    @media (max-width: 1200px) {
-      width: 66%;
-    }
-    @media (max-width: 992px) {
-      width: 58%;
     }
   }
   ::ng-deep .contact {

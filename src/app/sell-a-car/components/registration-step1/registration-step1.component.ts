@@ -16,10 +16,6 @@ export class RegistrationStep1Component implements OnInit {
   }
 
   step1Submitted() {
-    this.regForm.get('carDetails').get('firstname').markAsTouched();
-    this.regForm.get('carDetails').get('firstname').updateValueAndValidity();
-    this.regForm.get('carDetails').get('lastname').markAsTouched();
-    this.regForm.get('carDetails').get('lastname').updateValueAndValidity();
   }
 
 }

@@ -10,99 +10,37 @@ import { CarService } from 'src/app/shared/services/car.service';
 export class SectionSellACarComponent implements OnInit {
   isLinear: boolean;
   secondStep: string;
-  sellACarForm: FormGroup;
-  carInfoFormGroup: FormGroup;
-  carInfoFormGroupSecond: FormGroup;
+  registrationForm: FormGroup;
 
   constructor(private fb: FormBuilder,
               private carService: CarService) { }
 
-  //ngOnInit() {
-    //this.buildCarFormArray();
-    //this.buildSellACarForm();
-    //this.buildSellACarFormSecond();
-  //}
-
-  /** Returns a FormArray with the name 'formArray'. */
-  /*get carFormArray(): AbstractControl | null { return this.sellACarForm.get('carFormArray'); }
-
-  buildCarFormArray() {
-    this.sellACarForm = this.fb.group({
-      carFormArray: this.fb.array([
-        this.fb.group({
-          make: ['', Validators.required],
-          year: [''],
-          mileage: [''],
-          model: [''],
-          transmision: [''],
-          body: [''],
-          interiorColor: [''],
-          exteriorColor: [''],
-          vin: [''],
-          pasteALink: ['']
-        }),
-        this.fb.group({
-          firstName: ['', Validators.required],
-          lastName: [''],
-          email: [''],
-          phone: [''],
-          notes: ['']
-        }),
-      ])
-    });
+  ngOnInit(): void {
+    this.buildSellACarForm();
   }
 
   buildSellACarForm() {
-    this.carInfoFormGroup = this.fb.group({
-      make: ['', Validators.required],
-      year: [''],
-      mileage: [''],
-      model: [''],
-      transmision: [''],
-      body: [''],
-      interiorColor: [''],
-      exteriorColor: [''],
-      vin: [''],
-      pasteALink: ['']
-    });
-  }
-
-  buildSellACarFormSecond() {
-    this.carInfoFormGroupSecond = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: [''],
-      email: [''],
-      phone: [''],
-      notes: ['']
-    });
-  }
-
-  onSubmit(value) {
-    this.carService.createCar(value)
-      .then(
-        res => {
-        }
-      );
-  }*/
-
-  title = 'Angular Material Stepper Example with single '
-    + 'Reactive form across mulitple child components';
-
-  registrationForm: FormGroup;
-
-  ngOnInit(): void {
     this.registrationForm = new FormGroup({
       'carDetails': new FormGroup({
-        'firstname': new FormControl(null, Validators.required),
-        'mi': new FormControl(null),
-        'lastname': new FormControl(null, Validators.required),
+        'make': new FormControl(null, Validators.required),
+        'mileage': new FormControl(null),
+        'model': new FormControl(null),
+        'transmision': new FormControl(null),
+        'year': new FormControl(null),
+        'interiorColor': new FormControl(null),
+        'exteriorColor': new FormControl(null),
+        'vin': new FormControl(null),
+        'body': new FormControl(null),
+        'pasteALink': new FormControl(null)
       }),
       'contactDetails': new FormGroup({
+        'firstName': new FormControl(null, [Validators.required]),
+        'lastName': new FormControl(null),
         'email': new FormControl(null, [Validators.required, Validators.email]),
-        'phone': new FormControl(null)
+        'phone': new FormControl(null),
+        'notes': new FormControl(null)
       })
     });
-
   }
 
 }

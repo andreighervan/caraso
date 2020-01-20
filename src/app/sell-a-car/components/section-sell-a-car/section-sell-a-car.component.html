@@ -1,7 +1,7 @@
 <section class="sell-a-car">
     <div class="container">
         <div class="row">
-            <aside class="sidebar">
+            <aside class="col-md-3 col-sm-6">
                 <h3>Sell <span>your car</span></h3>
                 <hr />
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -36,133 +36,8 @@
                     </div>
                 </div>
             </aside>
-            <div class="col-right">
+            <div class="col-md-9 col-sm-6 pr-0">
                 <div class="contact">
-                    <!-- <form [formGroup]="sellACarForm" (ngSubmit)="onSubmit(sellACarForm.value)">
-                        <mat-horizontal-stepper [linear]="isLinear" formArrayName="carFormArray" #stepper>
-                            <mat-step formGroupName="0" [stepControl]="carFormArray?.get([0])">
-                                <ng-template matStepLabel>1. Car Information</ng-template>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="make">Make <span>*</span></label>
-                                            <input type="text" formControlName="make" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="model">Model <span>*</span></label>
-                                            <input type="text" formControlName="model" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="body">Body</label>
-                                            <input type="text" formControlName="body" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="transmision">Transmision</label>
-                                            <input type="text" formControlName="transmision" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="mileage">Mileage</label>
-                                            <input type="text" formControlName="mileage" />
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="year">Year</label>
-                                            <input type="text" formControlName="year" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="exteriorColor">Exterior color</label>
-                                            <input type="text" formControlName="exteriorColor" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="interiorColor">Interior color</label>
-                                            <input type="text" formControlName="interiorColor" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="form-field">
-                                            <label for="vin">Vin</label>
-                                            <input type="text" formControlName="vin" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-field">
-                                            <label for="pasteALink">Paste a link</label>
-                                            <input type="text" formControlName="pasteALink" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="submit-btn"
-                                    matStepperNext>NEXT
-                                    STEP</button>
-                            </mat-step>
-                            <mat-step formGroupName="1" [stepControl]="carFormArray?.get([1])">
-                                <ng-template matStepLabel>2. Contact Details</ng-template>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-field">
-                                            <label for="firstName">First Name <span>*</span></label>
-                                            <input type="text" id="firstName" formControlName="firstName" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-field">
-                                            <label for="lastName">Last Name <span>*</span></label>
-                                            <input type="text" id-="lastName" formControlName="lastName" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-field">
-                                            <label for="email">Email <span>*</span></label>
-                                            <input type="text" id="email" formControlName="email" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-field">
-                                            <label for="phone">Phone <span>*</span></label>
-                                            <input type="text" id="phone" formControlName="phone" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-field">
-                                            <label for="notes">Notes</label>
-                                            <textarea formControlName="notes" id="notes" rows="10"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="submit-btn"
-                                    matStepperNext>
-                                    SELL MY CAR</button>
-                                <p class="note">By submitting this form, you will be requesting trade-in value at no
-                                    obligation and will be contacted within 48 hours by
-                                    a sales representative.</p>
-                            </mat-step>
-                        </mat-horizontal-stepper>
-                    </form> -->
                     <div id="registration" class="conatiner col-md-12">
                         <form id="regForm" [formGroup]="registrationForm">
                             <mat-horizontal-stepper #stepper linear>
