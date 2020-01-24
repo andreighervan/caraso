@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -8,18 +8,17 @@ import { FormGroup } from '@angular/forms';
 })
 export class RegistrationStep2Component implements OnInit {
 
+  @Output() formValue = new EventEmitter();
+
   constructor() { }
 
   @Input() regForm: FormGroup;
-
-  formSubmitted: boolean;
 
   ngOnInit() {
   }
 
   submit() {
-    console.log(this.regForm.value);
-    this.formSubmitted = true;
+    this.formValue.emit(this.regForm.value);
   }
 
 }

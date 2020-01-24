@@ -13,22 +13,25 @@ export class CarService {
     return this.firestore.collection('cars').snapshotChanges();
   }
 
-  createCar(value: Car) {
+  createCar(value) {
+    const { contactDetails } = value;
+    const { carDetails } = value;
     return this.firestore.collection('cars').add({
-      make: value.make,
-      year: value.year,
-      mileage: value.mileage,
-      model: value.model,
-      transmision: value.transmision,
-      body: value.body,
-      interiorColor: value.interiorColor,
-      exteriorColor: value.exteriorColor,
-      vin: value.vin,
-      pasteALink: value.pasteALink,
-      firstName: value.firstName,
-      lastName: value.lastName,
-      email: value.email,
-      phone: value.phone
+      make: carDetails.make,
+      year: carDetails.year,
+      mileage: carDetails.mileage,
+      model: carDetails.model,
+      transmision: carDetails.transmision,
+      body: carDetails.body,
+      interiorColor: carDetails.interiorColor,
+      exteriorColor: carDetails.exteriorColor,
+      vin: carDetails.vin,
+      pasteALink: carDetails.pasteALink,
+      firstName: contactDetails.firstName,
+      lastName: contactDetails.lastName,
+      email: contactDetails.email,
+      phone: contactDetails.phone,
+      notes: contactDetails.notes
     });
   }
 

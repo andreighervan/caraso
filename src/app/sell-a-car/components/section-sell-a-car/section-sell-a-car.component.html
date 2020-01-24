@@ -47,7 +47,7 @@
                                 </mat-step>
                                 <mat-step formGroupName="contactDetails" [stepControl]="registrationForm.get('contactDetails')">
                                     <ng-template matStepLabel>2. Contact Details</ng-template>
-                                    <app-registration-step2 [regForm]="registrationForm"></app-registration-step2>
+                                    <app-registration-step2 (formValue)='sendFormData($event)' [regForm]="registrationForm"></app-registration-step2>
                                 </mat-step>
                             </mat-horizontal-stepper>
                         </form>

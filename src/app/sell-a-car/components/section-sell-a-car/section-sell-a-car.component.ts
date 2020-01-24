@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { CarService } from 'src/app/shared/services/car.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-section-sell-a-car',
@@ -13,7 +14,8 @@ export class SectionSellACarComponent implements OnInit {
   registrationForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private carService: CarService) { }
+    private carService: CarService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.buildSellACarForm();
@@ -43,4 +45,12 @@ export class SectionSellACarComponent implements OnInit {
     });
   }
 
+  sendFormData(value) {
+    this.carService.createCar(value)
+      .then(
+        res => {
+          this.router.navigate(['/home']);
+        }
+      )
+  }
 }
