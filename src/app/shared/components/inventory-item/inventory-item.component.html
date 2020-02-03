@@ -1,9 +1,9 @@
 <div class="inventory-item">
-    <div class="inventory-inner">
+    <div class="inventory-inner clearfix" *ngFor="let car of cars">
         <div class="item-title-img">
             <img class="item-img" src="../../assets/img/inventory-item.png" alt="inventory item" />
             <div class="item-title-price ml-2">
-                <h4 class="item-title">aston martin vanquish</h4>
+                <h4 class="item-title">{{car.model}}</h4>
                 <h5 class="item-price">$ 20000</h5>
                 <hr class="item-hr clearfix" />
             </div>
@@ -48,8 +48,4 @@
         </div>
         <hr class="item-hr" />
     </div>
-</div>
-<div *ngFor="let car of cars">
-    <p>{{car.carName}}</p>
-    <p>{{car.carYear}}</p>
 </div>

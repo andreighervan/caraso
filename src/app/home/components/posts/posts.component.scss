@@ -12,18 +12,10 @@
     margin-bottom: 5rem;
   }
   .carousel-item {
+    @media (min-width: 576px) {
+      margin-right: 0;
+    }
     .post {
-      width: 31.5%;
-      display: inline-block;
-      &:first-of-type {
-        margin-right: 30px;
-      }
-      &:nth-child(2) {
-        margin-right: 30px;
-      }
-      img{
-          max-width: 100%;
-      }
       figcaption {
         padding: 2rem;
         background: $color-grey-fourth;

@@ -2,7 +2,9 @@
 
 .inventory-item {
   text-transform: uppercase;
+  margin-bottom: 15px;
   .inventory-inner {
+    padding-bottom: 15px;
     .item-title-img {
       .item-img {
         float: left;

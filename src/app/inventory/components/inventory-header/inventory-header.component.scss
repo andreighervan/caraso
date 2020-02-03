@@ -26,8 +26,8 @@
           border: none;
           font-family: ProximaNovaRegular, Arial, sans-serif;
           font-size: 1.4rem;
-          -webkit-appearance: button;
-          appearance: button;
+          -webkit-appearance: none;
+          appearance: none;
           outline: none;
         }
         &:hover::before {
