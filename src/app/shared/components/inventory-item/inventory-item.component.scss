@@ -5,17 +5,8 @@
   margin-bottom: 15px;
   .inventory-inner {
     padding-bottom: 15px;
-    .item-title-img {
-      .item-img {
-        float: left;
-      }
-    }
-    .item-features {
-      display: flex;
-    }
     .item-title-price,
     .item-features {
-      padding-left: 3.6%;
       .item-left,.item-center {
         i {
           color: $color-white;
@@ -33,9 +24,6 @@
           font-size: 1.4rem;
           font-family: ProximaNovaBold, Arial, sans-serif;
         }
-      }
-      .ml-item-center{
-        margin-left:72px;
       }
       .item-hr,
       .item-title {
