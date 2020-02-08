@@ -8,7 +8,7 @@ export interface Car {
     body: string;
     interiorColor: string;
     exteriorColor: string;
-    vin: string;
+    price: string;
     pasteALink: string;
     firstName: string;
     lastName: string;

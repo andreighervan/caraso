@@ -6,31 +6,36 @@
     </div>
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="home-select">
-          <select class="search__select">
-            <option>Condition</option>
-            <option>Opt 1</option>
-            <option>Opt 2</option>
-          </select>
-        </div>
+        <mat-form-field class="mat-field">
+          <input type="text" placeholder="Make" aria-label="Make" matInput [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let make of filteredMakesOptions | async" [value]="make">
+              {{make}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="home-select">
-          <select class="search__select">
-            <option>Make</option>
-            <option>Opt 1</option>
-            <option>Opt 2</option>
-          </select>
-        </div>
+        <mat-form-field class="mat-field">
+          <input type="text" placeholder="Pick the model of the car" aria-label="Model" matInput
+            [matAutocomplete]="autoModel">
+          <mat-autocomplete autoActiveFirstOption #autoModel="matAutocomplete">
+            <mat-option *ngFor="let model of filteredModelsOptions | async" [value]="model">
+              {{model}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
-        <div class="home-select">
-          <select class="search__select">
-            <option>Year</option>
-            <option>Opt 1</option>
-            <option>Opt 2</option>
-          </select>
-        </div>
+        <mat-form-field class="mat-field">
+          <input type="text" placeholder="Pick the year of the car" aria-label="Model" matInput
+            [matAutocomplete]="autoYear">
+          <mat-autocomplete autoActiveFirstOption #autoYear="matAutocomplete">
+            <mat-option *ngFor="let year of filteredYearOptions | async" [value]="model">
+              {{year}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="home-select">
@@ -46,7 +51,7 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="home-select">
           <select class="search__select">
-            <option>Price</option>
+            <option>Min Price</option>
             <option>Opt 1</option>
             <option>Opt 2/option>
           </select>
@@ -55,7 +60,7 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="home-select">
           <select class="search__select">
-            <option>Drive</option>
+            <option>Max Price</option>
             <option>Opt 1</option>
             <option>Opt 2/option>
           </select>

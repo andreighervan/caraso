@@ -25,7 +25,7 @@ export class CarService {
       body: carDetails.body,
       interiorColor: carDetails.interiorColor,
       exteriorColor: carDetails.exteriorColor,
-      vin: carDetails.vin,
+      price: carDetails.price,
       pasteALink: carDetails.pasteALink,
       firstName: contactDetails.firstName,
       lastName: contactDetails.lastName,

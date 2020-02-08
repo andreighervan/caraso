@@ -31,7 +31,7 @@ export class SectionSellACarComponent implements OnInit {
         'year': new FormControl(null),
         'interiorColor': new FormControl(null),
         'exteriorColor': new FormControl(null),
-        'vin': new FormControl(null),
+        'price': new FormControl(null),
         'body': new FormControl(null),
         'pasteALink': new FormControl(null)
       }),
