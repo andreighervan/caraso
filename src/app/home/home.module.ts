@@ -23,6 +23,7 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     SharedModule,
     CarouselModule,
+    CoreModule,
     WavesModule,
     CoreModule,
     NgbModule

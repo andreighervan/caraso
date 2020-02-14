@@ -16,3 +16,8 @@ export interface Car {
     phone: number;
     notes: string;
 }
+
+export interface CarCombo{
+    value: string;
+    viewValue: string;
+}

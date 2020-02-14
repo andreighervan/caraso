@@ -13,6 +13,6 @@ import { MaterialModule } from './material/material.module';
     MaterialModule
   ],
   declarations: [],
-  exports: []
+  exports: [ReactiveFormsModule, FormsModule, MaterialModule]
 })
 export class CoreModule { }

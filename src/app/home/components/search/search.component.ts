@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { map, startWith } from 'rxjs/operators';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+
+import { CarCombo } from 'src/app/shared/models/car';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -9,33 +9,35 @@ import { Observable } from 'rxjs';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-  filteredMakesOptions: Observable<string[]>;
-  filteredModelsOptions: Observable<string[]>;
-  filteredYearOptions: Observable<string[]>;
+  searchForm: FormGroup;
+  makes: CarCombo[] = [
+    { value: 'vw golf', viewValue: 'VW Golf' },
+    { value: 'audi', viewValue: 'Audi A8' },
+    { value: 'mercedes', viewValue: 'Mercedes' }
+  ];
 
-  constructor() { }
+  models: CarCombo[] = [
+    { value: 'vw', viewValue: 'Volksvagen' },
+    { value: 'audi', viewValue: 'Audi' },
+    { value: 'mercedes', viewValue: 'Mercedes' }
+  ];
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.filteredMakesOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
-    this.filteredModelsOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
-    this.filteredYearOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
+    this.buildSearchForm();
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+  // search form init
+  buildSearchForm() {
+    this.searchForm = this.fb.group({
+      makes: [''],
+      models: ['']
+    });
   }
 
+  onSubmit() {
+    const { models, makes } = this.searchForm.value;
+    console.log('value', models, makes);
+  }
 }
