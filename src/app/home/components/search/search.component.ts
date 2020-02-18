@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { CarCombo } from 'src/app/shared/models/car';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { SearchService } from 'src/app/core/services/search.service';
 
 @Component({
   selector: 'app-search',
@@ -22,7 +23,8 @@ export class SearchComponent implements OnInit {
     { value: 'mercedes', viewValue: 'Mercedes' }
   ];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+              private searchService: SearchService) { }
 
   ngOnInit() {
     this.buildSearchForm();
@@ -36,8 +38,11 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  search(filters: any): void {
     const { models, makes } = this.searchForm.value;
     console.log('value', models, makes);
+
+    Object.keys(filters).forEach(key => filters[key] === '' ? delete filters[key] : key);
+    this.searchService.searchFilters.next(filters);
   }
 }

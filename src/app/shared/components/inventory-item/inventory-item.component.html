@@ -3,19 +3,19 @@
         <div class="item-title-img d-md-block">
             <img class="float-lg-left text-md-center img-fluid" src="assets/img/inventory-item.png" alt="inventory item" />
             <div class="item-title-price ml-2">
-                <h4 class="item-title">{{car.model}}</h4>
-                <h5 class="item-price">$ 20000</h5>
+                <h4 class="item-title">{{car.make}} {{car.model}}</h4>
+                <h5 class="item-price">$ {{car.price}}</h5>
                 <hr class="item-hr clearfix" />
             </div>
         </div>
-        <div class="item-features d-md-block">
+        <div class="item-features">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="item-left d-flex justify-content-start">
                         <i class="fas fa-car"></i>
                         <div>
-                            <h6 class="item-paragraph">Body</h6>
-                            <p>Sedan</p>
+                            <h6 class="item-paragraph">Year</h6>
+                            <p>{{car.year}}</p>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         <i class="fas fa-car"></i>
                         <div>
                             <h6 class="item-paragraph">Transmission</h6>
-                            <p>Automatic</p>
+                            <p>{{car.transmision}}</p>
                         </div>
                     </div>
                 </div>
