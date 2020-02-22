@@ -5,7 +5,7 @@ export interface Car {
     mileage: number;
     model: string;
     transmision: string;
-    body: string;
+    horserPower: number;
     interiorColor: string;
     exteriorColor: string;
     price: string;
@@ -20,4 +20,9 @@ export interface Car {
 export interface CarCombo{
     value: string;
     viewValue: string;
+}
+
+export interface CarFilter{
+    makes: string;
+    models: string;
 }

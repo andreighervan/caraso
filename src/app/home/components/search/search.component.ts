@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
-import { CarCombo } from 'src/app/shared/models/car';
-import { SearchService } from 'src/app/core/services/search.service';
+import { CarCombo, CarFilter } from 'src/app/shared/models/car';
+import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
   selector: 'app-search',
@@ -12,19 +13,20 @@ import { SearchService } from 'src/app/core/services/search.service';
 export class SearchComponent implements OnInit {
   searchForm: FormGroup;
   makes: CarCombo[] = [
-    { value: 'vw golf', viewValue: 'VW Golf' },
-    { value: 'audi', viewValue: 'Audi A8' },
-    { value: 'mercedes', viewValue: 'Mercedes' }
-  ];
-
-  models: CarCombo[] = [
-    { value: 'vw', viewValue: 'Volksvagen' },
+    { value: 'Volksvagen', viewValue: 'Volksvagen' },
     { value: 'audi', viewValue: 'Audi' },
     { value: 'mercedes', viewValue: 'Mercedes' }
   ];
 
+  models: CarCombo[] = [
+    { value: 'vw-golf', viewValue: 'Volksvagen Golf' },
+    { value: 'audi-a8', viewValue: 'Audi A8' },
+    { value: 'mercedes-benz', viewValue: 'Mercedes Benz' }
+  ];
+
   constructor(private fb: FormBuilder,
-              private searchService: SearchService) { }
+              private carService: CarService,
+              private route: Router) { }
 
   ngOnInit() {
     this.buildSearchForm();
@@ -33,16 +35,17 @@ export class SearchComponent implements OnInit {
   // search form init
   buildSearchForm() {
     this.searchForm = this.fb.group({
-      makes: [''],
+      make: [''],
       models: ['']
     });
   }
 
-  search(filters: any): void {
-    const { models, makes } = this.searchForm.value;
-    console.log('value', models, makes);
+  search(filters: CarFilter): void {
+    const { models, make } = this.searchForm.value;
+    console.log('value', models, make);
 
     Object.keys(filters).forEach(key => filters[key] === '' ? delete filters[key] : key);
-    this.searchService.searchFilters.next(filters);
+    this.carService.searchFilters.next(filters);
+    this.route.navigateByUrl('/inventory');
   }
 }

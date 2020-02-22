@@ -7,11 +7,14 @@ import * as fromComponents from './components';
 import { LoginComponent } from '../auth/components/login/login.component';
 import { RegisterComponent } from '../auth/components/register/register.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../core/material/material.module';
 
+import { FilterPipe } from './pipe/filter.pipe';
+
 @NgModule({
-  declarations: [...fromComponents.components],
+  declarations: [...fromComponents.components, FilterPipe],
   imports: [
     CommonModule,
     CarouselModule,

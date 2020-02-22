@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Car } from '../models/car';
+import { Car, CarFilter } from '../models/car';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarService {
-
+  searchFilters = new Subject<CarFilter>();
   constructor(private firestore: AngularFirestore) { }
 
   getCars() {
