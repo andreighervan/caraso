@@ -1,5 +1,5 @@
-<div class="inventory-item">
-    <div class="inventory-inner clearfix" *ngFor="let car of filteredCars | filter: searchByKeyword: 'makes'">
+<div class="inventory-item" *ngIf="filteredCars">
+    <div class="inventory-inner clearfix" *ngFor="let car of filteredCars | filter: searchByKeyword: 'make'">
         <div class="item-title-img d-md-block">
             <img class="float-lg-left text-md-center img-fluid" src="assets/img/inventory-item.png" alt="inventory item" />
             <div class="item-title-price ml-2">

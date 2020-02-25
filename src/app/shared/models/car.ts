@@ -23,6 +23,6 @@ export interface CarCombo{
 }
 
 export interface CarFilter{
-    makes: string;
-    models: string;
+    make: string;
+    model: string;
 }

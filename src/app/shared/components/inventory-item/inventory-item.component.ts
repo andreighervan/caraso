@@ -18,17 +18,17 @@ export class InventoryItemComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.fetchCars();
     this.getFilteredCars();
-  }
-
-  ngOnChanges(): void {
     if (this.groupFilters) {
       this.filterCarList(this.groupFilters);
     }
   }
 
+   ngOnChanges(): void {
+  
+  }
+
   getFilteredCars() {
     this.serviceCar.searchFilters.subscribe(data => {
-      console.log(data);
       this.groupFilters = data;
     }, error => console.log(error));
   }
@@ -46,7 +46,7 @@ export class InventoryItemComponent implements OnInit, OnChanges {
   }
 
   filterCarList(filters: CarFilter): void {
-    this.filteredCars = this.cars; 
+    this.filteredCars = this.cars;
     const keys = Object.keys(filters);
     const filterCar = car => {
       let result = keys.map(key => {
@@ -57,7 +57,7 @@ export class InventoryItemComponent implements OnInit, OnChanges {
         }
       });
       result = result.filter(it => it !== undefined);
-      return result.reduce((acc, cur: any) => acc && cur, 1)
+      return result.reduce((acc, cur: any) => acc && cur, 1);
     }
     this.filteredCars = this.cars.filter(filterCar);
   }

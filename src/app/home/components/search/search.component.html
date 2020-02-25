@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="home-select">
-            <select class="search-select" formControlName="makes">
+            <select class="search-select" formControlName="make">
               <option value="" selected>Make</option>
               <option *ngFor="let make of makes" [value]="make.value">{{make.viewValue}}</option>
             </select>
