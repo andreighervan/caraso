@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="home-select">
-            <select class="search-select" formControlName="models">
+            <select class="search-select" formControlName="model">
               <option value="" selected>Model</option>
               <option *ngFor="let model of models" [value]="model.value">{{model.viewValue}}</option>
             </select>

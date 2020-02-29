@@ -9,22 +9,18 @@ import { CarService } from '../../services/car.service';
 })
 export class InventoryItemComponent implements OnInit, OnChanges {
   searchByKeyword: string;
-  cars: Car[];
-  filteredCars: Car[];
+  cars: Car[] = [];
+  filteredCars: Car[] = [];
   groupFilters: CarFilter;
 
   constructor(private serviceCar: CarService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.fetchCars();
     this.getFilteredCars();
-    if (this.groupFilters) {
-      this.filterCarList(this.groupFilters);
-    }
   }
 
-   ngOnChanges(): void {
-  
+  ngOnChanges(): void {
   }
 
   getFilteredCars() {
@@ -33,20 +29,8 @@ export class InventoryItemComponent implements OnInit, OnChanges {
     }, error => console.log(error));
   }
 
-  fetchCars() {
-    this.serviceCar.getCars().subscribe(carsArray => {
-      this.cars = carsArray.map(item => {
-        return {
-          id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as Car;
-      });
-      this.filteredCars = this.filteredCars.length > 0 ? this.filteredCars : this.cars;
-    });
-  }
-
-  filterCarList(filters: CarFilter): void {
-    this.filteredCars = this.cars;
+  filterCarList(filters: CarFilter, cars: any): void {
+    this.filteredCars = cars;
     const keys = Object.keys(filters);
     const filterCar = car => {
       let result = keys.map(key => {
@@ -60,5 +44,18 @@ export class InventoryItemComponent implements OnInit, OnChanges {
       return result.reduce((acc, cur: any) => acc && cur, 1);
     }
     this.filteredCars = this.cars.filter(filterCar);
+  }
+
+  fetchCars() {
+    this.serviceCar.getCars().subscribe(carsArray => {
+      this.cars = carsArray.map(item => {
+        return {
+          id: item.payload.doc.id,
+          ...item.payload.doc.data()
+        } as Car;
+      });
+      this.filterCarList(this.groupFilters, this.cars);
+      this.filteredCars = this.filteredCars.length > 0 ? this.filteredCars : this.cars;
+    });
   }
 }

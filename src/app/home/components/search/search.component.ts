@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
   ];
 
   models: CarCombo[] = [
-    { value: 'vw-golf', viewValue: 'Volksvagen Golf' },
+    { value: 'Golf', viewValue: 'Volksvagen Golf' },
     { value: 'audi-a8', viewValue: 'Audi A8' },
     { value: 'mercedes-benz', viewValue: 'Mercedes Benz' }
   ];
@@ -36,7 +36,7 @@ export class SearchComponent implements OnInit {
   buildSearchForm() {
     this.searchForm = this.fb.group({
       make: [''],
-      models: ['']
+      model: ['']
     });
   }
 
