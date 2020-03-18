@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { Car, CarFilter } from '../../models/car';
-import { CarService } from '../../services/car.service';
+import { Car, CarFilter } from '../../../../shared/models/car';
+import { CarService } from '../../../../shared/services/car.service';
 
 @Component({
   selector: 'app-inventory-item',

@@ -2,14 +2,20 @@
     <div class="row">
         <div class="col-sm-12 col-md-4">
             <div class="form-field" formGroupName="carDetails">
-                <label for="make">Make <span>*</span></label>
-                <input type="text" formControlName="make" />
+                <label for="make">Make</label>
+                <select formControlName="make">
+                    <option value="" selected>Make</option>
+                    <option *ngFor="let make of makes" [value]="make.value">{{make.viewValue}}</option>
+                </select>
             </div>
         </div>
         <div class="col-sm-12 col-md-4">
             <div class="form-field" formGroupName="carDetails">
-                <label for="model">Model <span>*</span></label>
-                <input type="text" formControlName="model" />
+                <label for="model">Model</label>
+                <select formControlName="model">
+                    <option value="" selected>Model</option>
+                    <option *ngFor="let model of models" [value]="model.value">{{model.viewValue}}</option>
+                </select>
             </div>
         </div>
 

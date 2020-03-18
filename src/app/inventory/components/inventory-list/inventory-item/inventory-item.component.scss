@@ -5,9 +5,10 @@
   margin-bottom: 15px;
   .inventory-inner {
     padding-bottom: 15px;
-    .item-title-price,
-    .item-features {
-      .item-left,.item-center {
+      .item-left,
+      .item-center {
+        display:flex;
+        justify-content: start;;
         i {
           color: $color-white;
           background: $color-gray-secondary;
@@ -19,32 +20,20 @@
           line-height: 2rem;
           margin-right: 1rem;
         }
-        p{
-          color:#22292d;
+        p {
+          color: #22292d;
           font-size: 14px;
           font-family: ProximaNovaBold, Arial, sans-serif;
         }
-      }
-      .item-hr,
-      .item-title {
-        margin-left: 3.6%;
       }
       .item-title {
         display: inline-block;
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
-      .item-price {
-        float: right;
-      }
-      .item-paragraph{
-        color:#aeaeae;
+      .item-paragraph {
+        color: #aeaeae;
         font-size: 1.2rem;
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
     }
-  }
-  .item-hr{
-    width: 64%;
-    float: right;
-  }
 }
