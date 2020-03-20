@@ -3,11 +3,11 @@ import { Car, CarFilter } from '../../../../shared/models/car';
 import { CarService } from '../../../../shared/services/car.service';
 
 @Component({
-  selector: 'app-inventory-item',
-  templateUrl: './inventory-item.component.html',
-  styleUrls: ['./inventory-item.component.scss']
+  selector: 'app-car-item',
+  templateUrl: './car-item.component.html',
+  styleUrls: ['./car-item.component.scss']
 })
-export class InventoryItemComponent implements OnInit, OnChanges {
+export class CarItemComponent implements OnInit, OnChanges {
   searchByKeyword: string;
   cars: Car[] = [];
   filteredCars: Car[] = [];

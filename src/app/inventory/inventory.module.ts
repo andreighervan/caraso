@@ -6,17 +6,17 @@ import { SharedModule } from '../shared/shared.module';
 import { InventoryRoutingModule } from './inventory-routing.module';
 import { InventoryComponent } from './inventory.component';
 import { InventorySidebarComponent } from './components/inventory-sidebar/inventory-sidebar.component';
-import { InventoryListComponent } from './components/inventory-list/inventory-list.component';
+import { CarsListComponent } from './components/cars-list/cars-list.component';
 import { InventoryHeaderComponent } from './components/inventory-header/inventory-header.component';
-import { InventoryItemComponent } from './components/inventory-list/inventory-item/inventory-item.component';
+import { CarItemComponent } from './components/cars-list/car-item/car-item.component';
 
 
 @NgModule({
   declarations: [InventoryComponent,
     InventorySidebarComponent,
-    InventoryListComponent,
+    CarsListComponent,
     InventoryHeaderComponent,
-    InventoryItemComponent],
+    CarItemComponent],
   imports: [
     CommonModule,
     InventoryRoutingModule,
