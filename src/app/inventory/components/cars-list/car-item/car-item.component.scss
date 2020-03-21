@@ -1,39 +1,90 @@
 @import "main.scss";
 
-.inventory-item {
+.car-item {
   text-transform: uppercase;
   margin-bottom: 15px;
   .inventory-inner {
-    padding-bottom: 15px;
-      .item-left,
-      .item-center {
-        display:flex;
-        justify-content: start;;
-        i {
-          color: $color-white;
-          background: $color-gray-secondary;
-          border-radius: 50%;
-          height: 2rem;
-          width: 2rem;
-          font-size: 1.1rem;
-          text-align: center;
-          line-height: 2rem;
-          margin-right: 1rem;
-        }
-        p {
-          color: #22292d;
-          font-size: 14px;
-          font-family: ProximaNovaBold, Arial, sans-serif;
-        }
-      }
-      .item-title {
-        display: inline-block;
+    padding-bottom: 1.5rem;
+    .car-title {
+      border-bottom: 1px solid $color-grey-fifth;
+      margin-bottom: 3rem;
+      margin-top: 1.5rem;
+      align-items: center;
+      h4.car-heading-title,
+      h5.car-heading-price {
         font-family: ProximaNovaBold, Arial, sans-serif;
+        font-style: italic;
+        line-height: 1;
+        display: inline-block;
       }
-      .item-paragraph {
-        color: #aeaeae;
-        font-size: 1.2rem;
+      .h4.car-heading-title {
+        color: $gray-color-text;
+      }
+      h5.car-heading-price {
+        color: $color-white;
+        background-color: $orange-color-text;
+        padding: 1.62rem 3rem;
+        min-width: 11rem;
+        position: relative;
+        &::before {
+          content: "";
+          top: 0;
+          left: -5rem;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-bottom: 5rem solid $orange-color-text;
+          border-left: 5rem solid transparent;
+        }
+      }
+    }
+    .item-left,
+    .item-center {
+      display: flex;
+      justify-content: flex-start;
+      i {
+        color: $color-white;
+        background: $color-gray-secondary;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 2rem;
+        margin-right: 1rem;
+      }
+      p {
+        color: #22292d;
+        font-size: 14px;
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
     }
+    .item-title {
+      display: inline-block;
+      font-family: ProximaNovaBold, Arial, sans-serif;
+    }
+    .item-paragraph {
+      color: #aeaeae;
+      font-size: 1.2rem;
+      font-family: ProximaNovaBold, Arial, sans-serif;
+    }
+  }
+  .btnAddTocompare {
+    background: $color-white;
+    color: $orange-color-text;
+    font-size: 14px;
+    border: 1px solid $orange-color-text;
+    border-radius: 3px;
+    height: 4rem;
+    width: 100%;
+  }
+  .btnInCompareList {
+    background: $orange-color-text;
+    color: $color-white;
+    border: 1px solid $orange-color-text;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 4rem;
+    width: 100%;
+  }
 }

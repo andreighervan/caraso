@@ -8,6 +8,8 @@ import { CarService } from '../../../../shared/services/car.service';
   styleUrls: ['./car-item.component.scss']
 })
 export class CarItemComponent implements OnInit, OnChanges {
+  addedToCompare: boolean;
+
   searchByKeyword: string;
   cars: Car[] = [];
   filteredCars: Car[] = [];
@@ -57,5 +59,11 @@ export class CarItemComponent implements OnInit, OnChanges {
       this.filterCarList(this.groupFilters, this.cars);
       this.filteredCars = this.filteredCars.length > 0 ? this.filteredCars : this.cars;
     });
+  }
+
+  onAddToCompare(index) {
+    if (index > -1) {
+      this.addedToCompare = true;
+    }
   }
 }

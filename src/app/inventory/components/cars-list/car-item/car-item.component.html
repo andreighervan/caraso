@@ -1,17 +1,17 @@
-<div class="inventory-item">
-    <div class="inventory-inner clearfix" *ngFor="let car of filteredCars">
+<div class="car-item">
+    <div class="inventory-inner clearfix" *ngFor="let car of filteredCars;let i= index">
         <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <img class="float-lg-left img-fluid" src="assets/img/inventory-item.png"
-                    alt="inventory item" />
+            <div class="col-md-4 col-sm-12 text-center">
+                <img class="img-fluid" src="assets/img/inventory-item.png" alt="inventory item" />
             </div>
-            <div class="col-md-8 col-sm-12">
-                <div class="row">
+            <div class="col-md-8 col-sm-12 border-bottom">
+                <div class="row car-title">
                     <div class="col-6">
-                        <h4 class="item-title">{{car.make}} {{car.model}}</h4>
+                        <h4 class="car-heading-title">{{car.make}} {{car.model}}</h4>
                     </div>
                     <div class="col-6 text-right">
-                        <h5 class="item-price">$ {{car.price}}</h5>
+                        <div class="triangle-bottomright"></div>
+                        <h5 class="car-heading-price">${{car.price | number}}</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -33,13 +33,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6">
+                    <div class="col-lg-4 col-6 text-right">
                         <div class="item-right">
                             <h6>stock: #123456</h6>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-4 col-6">
                         <div class="item-features justify-content-start">
                             <div class="item-left">
@@ -60,14 +60,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-6">
+                    <div class="col-lg-4 col-6 text-right">
                         <div class="item-right">
-                            <h6>in compare list</h6>
+                            <button type="button" class="btn-compare" (click)="onAddToCompare(i)"
+                            [ngClass]="{'btnAddTocompare':!addedToCompare,'btnInCompareList':addedToCompare}">
+                                {{ addedToCompare?'IN COMPARE LIST':'ADD TO COMPARE'}}
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="item-hr" />
         </div>
     </div>
 </div>
