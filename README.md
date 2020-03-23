@@ -1,6 +1,10 @@
-# Caraso
+# Caraso (Marketplace Car from PSD from scratch)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+Functionalities:
+
+1. Lazy loading modules
+2. Advanced search
+3. Login/Register with Firebase/Angular 8
 
 ## Development server
 
