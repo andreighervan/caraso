@@ -23,18 +23,18 @@
       h5.car-heading-price {
         color: $color-white;
         background-color: $orange-color-text;
-        padding: 1.62rem 3rem;
+        padding: 1.62rem 2rem;
         min-width: 11rem;
         position: relative;
         &::before {
           content: "";
           top: 0;
-          left: -5rem;
+          left: -2rem;
           position: absolute;
           width: 0;
           height: 0;
           border-bottom: 5rem solid $orange-color-text;
-          border-left: 5rem solid transparent;
+          border-left: 2rem solid transparent;
         }
       }
     }

@@ -1,0 +1,17 @@
+@import "../abstracts/variables";
+
+.btn {
+  color: $color-white;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-style: italic;
+  &:hover {
+    opacity: 0.9;
+    background: inherit;
+  }
+}
+
+.btn-warning {
+  background: $orange-color-text;
+}

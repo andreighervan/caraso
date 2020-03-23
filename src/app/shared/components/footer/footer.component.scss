@@ -4,12 +4,13 @@ footer {
   .top-footer {
     background: $gray-color-text;
     position: relative;
-    // top:-20rem;
     padding: 15rem 0 7rem 0;
     z-index: 100;
     .box {
       p {
         color: $color-gray-secondary;
+        font-family: OpenSansRegular, Arial, sans-serif;
+        line-height: 26px;;
       }
       h5 {
         text-transform: uppercase;
@@ -73,6 +74,7 @@ footer {
       min-height: 7rem;
       p {
         color: $color-gray-secondary;
+        font-family: OpenSansRegular, Arial, sans-serif;
       }
       .nav-footer {
         li {
@@ -80,7 +82,6 @@ footer {
           margin-left: 2rem;
           a {
             color: $color-white;
-            font-size: 14px;
           }
         }
       }
