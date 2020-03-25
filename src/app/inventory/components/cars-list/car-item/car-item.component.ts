@@ -11,7 +11,7 @@ export class CarItemComponent implements OnInit, OnChanges {
   addedToCompare: boolean;
 
   searchByKeyword: string;
-  cars: Car[] = [];
+  cars;
   filteredCars: Car[] = [];
   groupFilters: CarFilter;
 
@@ -51,10 +51,9 @@ export class CarItemComponent implements OnInit, OnChanges {
   fetchCars() {
     this.serviceCar.getCars().subscribe(carsArray => {
       this.cars = carsArray.map(item => {
-        return {
-          id: item.payload.doc.id,
-          ...item.payload.doc.data()
-        } as Car;
+        const id = item.payload.doc.id;
+        const cars = item.payload.doc.data() as Car;
+        return { id, ...cars };
       });
       this.filterCarList(this.groupFilters, this.cars);
       this.filteredCars = this.filteredCars.length > 0 ? this.filteredCars : this.cars;

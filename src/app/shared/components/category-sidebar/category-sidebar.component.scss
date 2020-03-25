@@ -1,0 +1,22 @@
+@import "main.scss";
+
+.shop-category {
+    padding-top: 5rem;
+    h6.category-item {
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      a {
+        color: $color-grey-tertiary;
+        padding-left: 5px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:before {
+        content: "\f105";
+        font-family: "Font Awesome 5 Free";
+        color: $orange-color-text;
+        font-size: inherit;
+      }
+    }
+  }

@@ -12,9 +12,10 @@ import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../core/material/material.module';
 
 import { FilterPipe } from './pipe/filter.pipe';
+import { CategorySidebarComponent } from './components/category-sidebar/category-sidebar.component';
 
 @NgModule({
-  declarations: [...fromComponents.components, FilterPipe],
+  declarations: [...fromComponents.components, FilterPipe, CategorySidebarComponent],
   imports: [
     CommonModule,
     CarouselModule,
