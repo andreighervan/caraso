@@ -15,9 +15,10 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { PopularPostsWidgetComponent } from './components/popular-posts-widget/popular-posts-widget.component';
 import { PopularPostComponent } from './components/popular-posts-widget/popular-post/popular-post.component';
 import { ArchivesWidgetComponent } from './components/archives-widget/archives-widget.component';
+import { TagsWidgetComponent } from './components/tags-widget/tags-widget.component';
 
 @NgModule({
-  declarations: [...fromComponents.components, FilterPipe, PopularPostsWidgetComponent, PopularPostComponent, ArchivesWidgetComponent],
+  declarations: [...fromComponents.components, FilterPipe, PopularPostsWidgetComponent, PopularPostComponent, ArchivesWidgetComponent, TagsWidgetComponent],
   imports: [
     CommonModule,
     CarouselModule,

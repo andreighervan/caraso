@@ -8,8 +8,20 @@ article.blog-article {
       h4.card-title {
         font-style: italic;
       }
+      .card-subtitle{
+        margin: 1.5rem 0;;
+        span{
+          font-size: 14px;
+          margin-right: 1.5rem;
+          i{
+            color: $orange-color-text;
+            margin-right: 5px;
+          }
+        }
+      }
       p.card-text {
         margin-bottom: 3rem;
+        line-height: 26px;
       }
     }
   }

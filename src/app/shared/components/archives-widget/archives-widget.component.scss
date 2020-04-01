@@ -7,6 +7,7 @@
         padding-bottom: 1.5rem;
     }
     ul.list-group {
+        margin-top: 1.5rem;
         li {
             font-size: 1.4rem;
             padding: 0;
@@ -15,9 +16,12 @@
             background: $color-grey-fourth;
             border-left: 5px solid $color-gray-secondary;
             margin-top: 5px;
+            &:hover{
+                border-left: 5px solid $orange-color-text;
+            }
             a {
                 color: $color-grey-tertiary;
-                padding-left: 5px;
+                padding-left: 1.5rem;
                 line-height: 40px;
                 &:hover {
                     text-decoration: none;

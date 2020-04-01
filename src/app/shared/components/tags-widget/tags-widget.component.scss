@@ -1,0 +1,23 @@
+@import "main.scss";
+
+.tags-widget {
+    padding-top: 5rem;
+    h5.title {
+        border-bottom: 1px solid $color-grey-fifth;
+        padding-bottom: 1.5rem;
+    }
+    .tags {
+        margin-top:1rem;
+        span.tag {
+            display: inline-block;
+            font-size: 1.4rem;
+            box-shadow: 3px 3px 4px 1px rgba(216,216,216,1);
+            font-family: OpenSansRegular, Arial, sans-serif;
+            line-height: 35px;
+            padding: 0 1.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            margin-right: 1rem;
+        }
+    }
+}
