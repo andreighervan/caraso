@@ -12,9 +12,12 @@ import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../core/material/material.module';
 
 import { FilterPipe } from './pipe/filter.pipe';
+import { PopularPostsWidgetComponent } from './components/popular-posts-widget/popular-posts-widget.component';
+import { PopularPostComponent } from './components/popular-posts-widget/popular-post/popular-post.component';
+import { ArchivesWidgetComponent } from './components/archives-widget/archives-widget.component';
 
 @NgModule({
-  declarations: [...fromComponents.components, FilterPipe],
+  declarations: [...fromComponents.components, FilterPipe, PopularPostsWidgetComponent, PopularPostComponent, ArchivesWidgetComponent],
   imports: [
     CommonModule,
     CarouselModule,

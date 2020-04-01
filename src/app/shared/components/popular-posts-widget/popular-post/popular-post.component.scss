@@ -1,0 +1,18 @@
+@import "main.scss";
+
+.popular-post {
+  margin-top: 2rem;
+  p.post-title {
+    margin-bottom: 2rem;
+    color: $gray-color-text;
+    line-height: 1;
+    font-weight: 400;
+  }
+  p.post-subtitle {
+    color: $color-gray-secondary;
+    i {
+      color: $orange-color-text;
+      margin-right: 1rem;
+    }
+  }
+}

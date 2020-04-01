@@ -1,0 +1,9 @@
+@import "main.scss";
+
+.popular-posts-widget {
+  padding-top: 5rem;
+  h5.title {
+    border-bottom: 1px solid $color-grey-fifth;
+    padding-bottom: 1.5rem;
+  }
+}

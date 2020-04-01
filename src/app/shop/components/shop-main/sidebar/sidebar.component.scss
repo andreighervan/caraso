@@ -1,6 +1,9 @@
 @import "main.scss";
 
 .shop-sidebar {
+  .widget{
+    background: $color-grey-fourth;
+  }
   .form-sidebar {
     form {
       display: flex;
