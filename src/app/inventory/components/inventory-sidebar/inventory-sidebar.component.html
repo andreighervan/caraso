@@ -1,35 +1,23 @@
 <aside class="inventory-sidebar">
     <h3 class="invetory-sidebar-title"><span>search</span> car</h3>
     <hr class="hr-sidebar" />
-    <div class="select">
-        <select>
-            <option value="condition">Condition</option>
-        </select>
-    </div>
-    <div class="select">
-        <select>
-            <option value="make">Make</option>
-        </select>
-    </div>
-    <div class="select">
-        <select>
-            <option value="year">Year</option>
-        </select>
-    </div>
-    <div class="select">
-        <select>
-            <option value="body">Body</option>
-        </select>
-    </div>
-    <div class="select">
-        <select>
-            <option value="drive">Drive</option>
-        </select>
-    </div>
-    <div class="select">
-        <select>
-            <option value="transmission">Transmission</option>
-        </select>
-    </div>
-    <button type="button" class="search-btn">SEARCH</button>
+    <form [formGroup]="searchForm" novalidate>
+        <div class="select">
+            <select formControlName="model">
+                <option value="" selected>Model</option>
+                <option *ngFor="let model of models" [value]="model.value">
+                    {{model.viewValue}}
+                </option>
+            </select>
+        </div>
+        <div class="select" >
+            <select formControlName="make">
+                <option value="" selected>Make</option>
+                <option *ngFor="let make of makes" [value]="make.value">
+                    {{make.viewValue}}
+                </option>
+            </select>
+        </div>
+        <button type="button" class="search-btn" (click)="search(searchForm.value)">SEARCH</button>4
+    </form>
 </aside>
