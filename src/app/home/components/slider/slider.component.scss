@@ -19,11 +19,11 @@
   &__heading--new {
     font-size: 1.8rem;
   }
-  &__heading--price {
+  span {
     font-size: 6rem;
     line-height: 5.4rem;
   }
-  &__heading--car {
+  &-heading-primary {
     font-size: 6rem;
     background: $color-white;
     color: $orange-color-text;
@@ -64,10 +64,10 @@
 ::ng-deep mdb-carousel {
   .carousel {
     a.carousel-control-prev {
-     // left: -5%;
+      // left: -5%;
     }
     .carousel-control-next {
-     // right: -5%;
+      // right: -5%;
     }
     .carousel-indicators {
       li {
@@ -76,18 +76,68 @@
         height: 0.5rem;
         transform: skewX(-25deg);
         background-color: #e0e0e0;
-        border-width:0;
+        border-width: 0;
         &.active {
           background: $orange-color-text;
           height: 0.5rem;
-          border-width:0;
+          border-width: 0;
         }
       }
     }
   }
-  mdb-carousel-item{
-    img{
+  mdb-carousel-item {
+    img {
       height: 79vh;
+    }
+  }
+}
+
+#slider {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        height: 80vh;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .carousel-caption {
+          padding: 0;
+          text-align: left;
+          position: absolute;
+          top: 50%;
+          left: 15rem;
+          transform: translateY(-50%);
+          button.btn-learn-more {
+            font-size: 1.8rem;
+            line-height: 1.7rem;
+            color: $color-white;
+            background: $gray-color-text;
+            transform: skew(-10deg);
+            border: none;
+            outline: none;
+            padding: 1rem 1.5rem;
+            i {
+              color: $orange-color-text;
+            }
+          }
+        }
+      }
+    }
+    ol.carousel-indicators {
+      li {
+        width: 3rem;
+        border-radius: 0;
+        height: 0.5rem;
+        transform: skewX(-25deg);
+        background-color: $color-grey-fifth;
+        border-width: 0;
+        &.active {
+          background: $orange-color-text;
+          height: 0.5rem;
+          border-width: 0;
+        }
+      }
     }
   }
 }
