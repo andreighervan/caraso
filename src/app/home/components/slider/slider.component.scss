@@ -108,6 +108,20 @@
           top: 50%;
           left: 15rem;
           transform: translateY(-50%);
+          .skew {
+            transform: skew(-25deg, 0deg);
+            .h1 {
+              background: $color-white;
+              color: $orange-color-text;
+              transform: skew(25deg, 0deg);
+              width: 59rem;
+              display:block;
+              span {
+                color: $gray-color-text;
+                display: block;
+              }
+            }
+          }
           button.btn-learn-more {
             font-size: 1.8rem;
             line-height: 1.7rem;
@@ -125,6 +139,7 @@
       }
     }
     ol.carousel-indicators {
+      margin-bottom: 4rem;
       li {
         width: 3rem;
         border-radius: 0;
@@ -137,6 +152,20 @@
           height: 0.5rem;
           border-width: 0;
         }
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 10%;
+      i {
+        font-size: 18px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        color: $white;
+        border-radius: 50%;
+        background: $color-grey-eight;
+        opacity: 1;
       }
     }
   }
