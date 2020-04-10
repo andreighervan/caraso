@@ -1,4 +1,18 @@
+@import "abstracts/variables";
+
 .title {
   font-family: ProximaNovaBold, Arial, sans-serif;
   text-transform: uppercase;
+}
+
+.bg-white {
+  background: $color-white;
+}
+
+.bg-gray {
+  background: $gray-color-text;
+}
+
+.bg-orange {
+  background: $orange-color-text;
 }

@@ -109,17 +109,32 @@
           left: 15rem;
           transform: translateY(-50%);
           .skew {
-            transform: skew(-25deg, 0deg);
-            .h1 {
-              background: $color-white;
-              color: $orange-color-text;
-              transform: skew(25deg, 0deg);
-              width: 59rem;
-              display:block;
+            transform: skewX(-25deg);
+            width: 42rem;
+            padding: 1rem;
+            h1,
+            h5,
+            h3 {
+              transform: skewX(25deg);
+              display: block;
               span {
                 color: $gray-color-text;
                 display: block;
               }
+            }
+            h1 {
+              width: 59rem;
+              color: $orange-color-text;
+            }
+            h3,
+            h5 {
+              color: $color-white;
+            }
+            h5 {
+              width: 50px;
+            }
+            h2 {
+              width: 220px;
             }
           }
           button.btn-learn-more {
