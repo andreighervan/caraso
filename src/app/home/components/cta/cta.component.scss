@@ -12,6 +12,7 @@
     h2.cta-heading {
       text-transform: uppercase;
       color: $color-white;
+      margin-bottom: 2rem;
       @media (max-width: 770px) {
         font-size: 2rem;
         margin: 1rem 0;
@@ -22,10 +23,10 @@
     }
     p.cta-paragraph {
       color: $color-white;
-      font-family: OpenSansRegular, Arial, Helvetica, sans-serif;
+      line-height: 26px;
     }
     .cta-btn-number {
-      margin-top: 4rem;
+      margin-top: 3rem;
       button.cta-btn {
         border: 1px solid $orange-color-text;
         background: $color-black;

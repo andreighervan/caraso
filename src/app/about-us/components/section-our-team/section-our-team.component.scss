@@ -1,0 +1,36 @@
+@import "main.scss";
+
+#our-team {
+    padding: 10rem 0;
+    background: $color-grey-fourth;
+    .section-heading {
+        color: $gray-color-text;
+        margin-bottom: 0.5rem;
+        span {
+            color: $orange-color-text;
+        }
+    }
+    .section-img {
+        margin-bottom: 6rem;
+    }
+    .team.card {
+        border: none;
+        border-radius: none;
+        text-align: center;
+        .card-body {
+            padding: 2rem;
+            .card-title {
+                padding-bottom: 2rem;
+                text-transform: uppercase;
+                color: $gray-color-text;
+                border-bottom: 1px solid $orange-color-text;
+                span {
+                    color: $orange-color-text;
+                }
+            }
+            .card-text {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

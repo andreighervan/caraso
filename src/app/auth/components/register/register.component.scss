@@ -7,14 +7,16 @@
     outline: none;
   }
   .form-signin {
-    .form-label-group{
-      .form-control{
+    .form-label-group {
+      .form-control {
         height: 3rem;
-        font-size:1.4rem;
+        font-size: 1.4rem;
+      }
+      label {
+        font-size: 1.6rem;
       }
     }
     .btn {
-      font-size: 80%;
       border-radius: 5rem;
       letter-spacing: 0.1rem;
       font-weight: bold;

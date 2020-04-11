@@ -1,0 +1,41 @@
+@import "main.scss";
+
+#why-choose-us {
+    padding: 8rem 0;
+    background: $color-black-secondary;
+    .section-heading {
+        color: $color-white;
+        margin-bottom: 0.5rem;
+        span {
+            color: $orange-color-text;
+        }
+    }
+    .section-img {
+        margin-bottom: 8rem;
+    }
+    .why-choose-first-row {
+        margin-bottom: 7rem;
+    }
+    .media.why-choose-us-box {
+        img.media-img {
+            height: 6rem;
+            width: 6rem;
+            padding: 1rem;
+            margin-right: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid $orange-color-text;
+        }
+        h5.media-title {
+            margin-bottom: 1.5rem;
+            color: $orange-color-text;
+            text-transform: uppercase;
+            span {
+                color: $color-white;
+            }
+        }
+        p.media-text {
+            line-height: 26px;
+            color: $color-white;
+        }
+    }
+}

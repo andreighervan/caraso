@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) },
   { path: 'single-product', loadChildren: () => import('./single-product/single-product.module').then(m => m.SingleProductModule) },
   { path: 'contact-us', loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule) },
-  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+  { path: 'about-us', loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule) }
 ];
 
 @NgModule({
