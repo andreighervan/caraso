@@ -1,0 +1,81 @@
+@import "main.scss";
+
+#testimonials {
+    padding: 8rem 0;
+    .testimonial {
+        h2.heading-primary {
+            color: $orange-color-text;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            line-height: 1;
+            span {
+                color: $gray-color-text;
+            }
+        }
+        #sliderTestimonials {
+            .carousel-item {
+                blockquote {
+                    padding: 2rem;
+                    border: 1px solid $orange-color-text;
+                    border-radius: 2px;
+                    p.paragraph {
+                        line-height: 26px;
+                        margin-bottom: 1rem;
+                    }
+                    footer {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        img {
+                            margin-right: 1.5rem;
+                        }
+                        .author {
+                            p {
+                                text-transform: uppercase;
+                                line-height: 20px;
+                                font-family: ProximaNovaBold, Arial, sans-serif;
+                                &.author-name {
+                                    color: $gray-color-text;
+                                }
+                                &.author-occupation {
+                                    color: $orange-color-text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ol.carousel-indicators {
+            float: right;
+            margin: 0;
+            li {
+                width: 3rem;
+                border-radius: 0;
+                height: 0.5rem;
+                transform: skewX(-25deg);
+                background-color: $color-grey-fifth;
+                border-width: 0;
+                &.active {
+                    background: $orange-color-text;
+                    height: 0.5rem;
+                    border-width: 0;
+                }
+            }
+        }
+        .carousel-controls {
+            display: block;
+            a {
+                height: 4rem;
+                width: 4rem;
+                border: 1px solid $orange-color-text;
+                border-radius: 2px;
+                i {
+                    color: $color-gray-secondary;
+                    font-size: 14px;
+                    opacity:1;
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
 @import "main.scss";
 
 #why-choose-us {
-    padding: 8rem 0;
+    padding-top: 8rem;
+    padding-bottom: 1rem;
     background: $color-black-secondary;
     .section-heading {
         color: $color-white;
@@ -13,10 +14,9 @@
     .section-img {
         margin-bottom: 8rem;
     }
-    .why-choose-first-row {
-        margin-bottom: 7rem;
-    }
+
     .media.why-choose-us-box {
+        margin-bottom: 7rem;
         img.media-img {
             height: 6rem;
             width: 6rem;
