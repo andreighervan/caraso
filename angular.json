@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/caraso-theme.scss",
               "src/styles.scss",
               "src/assets/icons/fontawesome.min.css",
               "src/assets/icons/brands.min.css",

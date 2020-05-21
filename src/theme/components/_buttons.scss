@@ -1,0 +1,14 @@
+$white: "#ffffff";
+$yellow: "#ffc107";
+
+button {
+    height: 3rem;
+    min-width: 19rem;
+    font-weight: 500;
+    .mat-raised-button:not([disabled]) {
+        color: $white;
+    }
+    .mat-stroked-button:not([disabled]) {
+        border-color: 2px solid $yellow;
+    }
+}

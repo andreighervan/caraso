@@ -1,0 +1,15 @@
+// Define a caraso typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$caraso-typography: mat-typography-config(
+  $font-family: 'Arial, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include mat-base-typography($caraso-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($caraso-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($caraso-typography);
