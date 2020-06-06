@@ -1,6 +1,8 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
+@import "layout";
+@import "variables";
 @import "typography";
 @import "components";
 
@@ -45,7 +47,6 @@ $alt-theme: mat-dark-theme($alt-primary, $alt-accent);
 
 // Import all the theming functionality.
 //@import '../core';
-@import 'form-fields';
 //@import '../../badge/badge-theme';
 //@import '../../bottom-sheet/bottom-sheet-theme';
 //@import '../../button-toggle/button-toggle-theme';

@@ -11,7 +11,7 @@ $gray-color-text: #22292d;
 html {
     font-size: 100%;
 
-     @include respond(tab-land) { // width < 1200?
+    /*  @include respond(tab-land) { // width < 1200?
          font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
      }
 
@@ -21,7 +21,7 @@ html {
     
      @include respond(big-desktop) {
          font-size: 75%; //1rem = 12, 12/16
-     }
+     } */
 }
 
 body {

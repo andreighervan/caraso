@@ -1,6 +1,6 @@
-@import "main.scss";
+@import "../../../../theme/theme";
 
-.header {
+/* .header {
   &__top {
     background: $gray-color-text;
     .flex {
@@ -187,6 +187,16 @@
     }
     &:hover .dropdown-content {
       display: block;
+    }
+  }
+} */
+
+header.header {
+  .header-top {
+    background: $gray1;
+    .header-top-left {
+      display: flex;
+      justify-content: start;
     }
   }
 }
