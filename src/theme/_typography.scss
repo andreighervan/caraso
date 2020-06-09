@@ -1,9 +1,39 @@
+@font-face {
+  font-family: ProximaNovaRegular;
+  src: url("/assets/fonts/ProximaNova-Regular.otf");
+}
+
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url("/assets/fonts/ProximaNova-Bold.otf");
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url("/assets/fonts/Proxima-Light.otf");
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url("/assets/fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url("/assets/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url("/assets/fonts/OpenSans-Bold.ttf");
+}
+
 // Define a caraso typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $caraso-typography: mat-typography-config(
-  $font-family: 'Arial, monospace',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
+  $font-family: 'ProximaNovaBold, Arial, sans-serif;',
+  $headline: mat-typography-level(18px, 36px, 700),
+  $body-1: mat-typography-level(12px, 14px, 700)
 );
 
 @include mat-base-typography($caraso-typography);
