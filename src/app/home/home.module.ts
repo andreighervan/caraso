@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
+
 import { SliderComponent } from './components/slider/slider.component';
 import { SearchComponent } from './components/search/search.component';
 import { PopularCarsComponent } from './components/popular-cars/popular-cars.component';
@@ -26,7 +29,8 @@ import { CoreModule } from '../core/core.module';
     CoreModule,
     WavesModule,
     CoreModule,
-    NgbModule
+    NgbModule,
+    NgSelectModule
   ]
 })
 export class HomeModule { }

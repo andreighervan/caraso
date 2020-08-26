@@ -43,25 +43,33 @@ i {
 }
 
 h1 {
-  font-size: 4.8rem;
-}
-
-h2 {
-  font-size: 3.6rem;
-}
-
-h3 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
 h4 {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-family: ProximaNovaBold, Arial, sans-serif;
 }
 
 h5 {
   font-size: 18px;
   font-family: ProximaNovaBold, Arial, sans-serif;
+}
+
+h1.section-title{
+  font-size: 36px;
+  color:$gray-color-text;
+  span{
+    color:$orange-color-text;
+  }
 }
 
 h6,

@@ -195,25 +195,35 @@ header.header {
   .header-top {
     background: $gray1;
     min-height: 50px;
+
     .info {
       display: flex;
       justify-content: start;
+      @media (max-width: 768px) {
+        display: block;
+      }
       .media {
         margin-right: 2.5rem;
       }
       i {
-        font-size: 36px;
+        font-size: 31px;
         margin-right: 10px;
       }
       p {
         margin-bottom: 0;
       }
-      p.mat-body-2,
+      p.mat-body-1,
       i {
         color: $orange1;
+        margin-bottom: 0;
+        line-height: 1;
       }
-      p.mat-body-1 {
+      p.mat-body-2 {
         color: $gray2;
+        text-transform: uppercase;
+        @media (max-width: 1200px) {
+          font-size: 12px;
+        }
       }
     }
     .select-header {

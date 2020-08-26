@@ -1,23 +1,7 @@
 @import "main.scss";
 
 .popular-cars {
-  padding: 6rem 0;
-  .car__heading {
-    color: $gray-color-text;
-    span {
-      color: $orange-color-text;
-    }
-  }
-  .col-3 {
-    margin: 0 auto;
-    @media (max-width: 1200px) {
-      max-width: 50%;
-    }
-    @media (max-width: 600px) {
-      max-width: 100%;
-    }
-  }
-
+  padding: 3.75rem 0;
   .car {
     h4.heading--price {
       position: absolute;
@@ -43,34 +27,28 @@
         color: $color-white;
         background: $color-gray-secondary;
         border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-        font-size: 1.1rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        font-size: 0.6875rem;
         text-align: center;
-        line-height: 2rem;
-        margin-right: 1rem;
+        line-height: 1.25rem;
+        margin-right: 0.625rem;
       }
       .right-car {
-        margin-left: 6rem;
-      }
-    }
-    .w-270 {
-      width: 27rem;
-      h4.heading--price {
-        font-family: ProximaNovaBold, Arial, sans-serif;
+        margin-left: 3.75rem;
       }
     }
   }
   .btn-show-all {
     border: 1px solid $gray-color-text;
     background: $color-white;
-    padding: 1.5rem 4rem;
+    padding: 0.9375rem 2.5rem;
     border-radius: 4px;
     line-height: 1;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     i {
       color: $orange-color-text;
-      font-size: 1.4rem;
+      font-size: 14px;
     }
     &:focus {
       outline: none;
@@ -80,8 +58,8 @@
     }
   }
   ::ng-deep ngb-tabset ul {
-    margin-bottom: 6rem;
-    margin-top: 4rem;
+    margin-bottom: 3.75rem;
+    margin-top: 2.5rem;
     border-bottom: none;
     li {
       color: #666666;
@@ -92,8 +70,8 @@
       a.nav-link .active,
       a.nav-link {
         border: none;
-        line-height: 3rem;
-        padding: 0 2rem;
+        line-height: 1.875rem;
+        padding: 0 1.25rem;
       }
       a.nav-link {
         color: #666666;
