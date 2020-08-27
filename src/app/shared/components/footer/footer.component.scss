@@ -4,7 +4,7 @@ footer {
   .top-footer {
     background: $gray-color-text;
     position: relative;
-    padding: 15rem 0 7rem 0;
+    padding: 9.375rem 0 4.375rem 0;
     z-index: 100;
     .box {
       p {
@@ -31,11 +31,11 @@ footer {
               i {
                 color: $color-gray-secondary;
                 background: $color-gray-hover;
-                height: 4rem;
-                width: 4rem;
-                line-height: 4rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                line-height: 2.5rem;
                 text-align: center;
-                font-size: 1.4rem;
+                font-size: 14px;
               }
             }
           }
@@ -63,7 +63,7 @@ footer {
           border: none;
           width: 30px;
           width: 10%;
-          padding-right: 2.5rem;
+          padding-right: 1.5625rem;
         }
       }
     }
@@ -71,7 +71,7 @@ footer {
   .bottom-footer {
     background: $color-gray-hover;
     .footer-content {
-      min-height: 7rem;
+      min-height: 4.375rem;
       p {
         color: $color-gray-secondary;
         font-family: OpenSansRegular, Arial, sans-serif;
@@ -79,7 +79,7 @@ footer {
       .nav-footer {
         li {
           display: inline-block;
-          margin-left: 2rem;
+          margin-left: 1.25rem;
           a {
             color: $color-white;
           }

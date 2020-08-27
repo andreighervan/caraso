@@ -64,11 +64,15 @@ h5 {
   font-family: ProximaNovaBold, Arial, sans-serif;
 }
 
-h1.section-title{
+h1.section-title {
   font-size: 36px;
-  color:$gray-color-text;
-  span{
-    color:$orange-color-text;
+  color: $gray-color-text;
+  &::before {
+    content: url("../../assets/img/bottom-heading.png");
+    position: absolute;
+  }
+  span {
+    color: $orange-color-text;
   }
 }
 
@@ -83,5 +87,3 @@ p {
   font-family: OpenSansRegular, Arial, sans-serif;
   color: $color-grey-tertiary;
 }
-
-

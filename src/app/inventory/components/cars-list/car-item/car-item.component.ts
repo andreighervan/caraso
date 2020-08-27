@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { Car, CarFilter } from '../../../../shared/models/car';
+import { Car } from '../../../../shared/models/car';
 import { CarService } from '../../../../shared/services/car.service';
 
 @Component({
@@ -31,7 +31,7 @@ export class CarItemComponent implements OnInit, OnChanges {
     }, error => console.log(error));
   }
 
-  filterCarList(filters: CarFilter, cars: any): void {
+  filterCarList(filters: Car, cars: any): void {
     this.filteredCars = cars;
     const keys = Object.keys(filters);
     const filterCar = car => {

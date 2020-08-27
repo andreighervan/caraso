@@ -1,20 +1,16 @@
 export interface Car {
     id: number;
-    make: string;
-    year: number;
-    mileage: number;
-    model: string;
-    transmision: string;
-    horserPower: number;
-    interiorColor: string;
-    exteriorColor: string;
-    price: string;
-    pasteALink: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: number;
-    notes: string;
+    make?: string;
+    year?: number;
+    mileage?: number;
+    model?: string;
+    transmision?: string;
+    horserPower?: number;
+    interiorColor?: string;
+    exteriorColor?: string;
+    price?: string;
+    pasteALink?: string;
+    customer: Customer;
 }
 
 export interface CarCombo{
@@ -22,7 +18,10 @@ export interface CarCombo{
     viewValue: string;
 }
 
-export interface CarFilter{
-    make: string;
-    model: string;
+export interface Customer{
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: number;
+    notes?: string;
 }
