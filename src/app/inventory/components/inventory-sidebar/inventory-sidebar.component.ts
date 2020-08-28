@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { CarCombo, CarFilter } from 'src/app/shared/models/car';
+import { CarCombo, Car } from 'src/app/shared/models/car';
 import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
@@ -40,7 +40,7 @@ export class InventorySidebarComponent implements OnInit {
     });
   }
 
-  search(filters: CarFilter): void {
+  search(filters: Car): void {
     const { model, make } = this.searchForm.value;
     console.log('value', model, make);
 

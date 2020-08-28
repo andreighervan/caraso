@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,8 @@ import { CarService } from 'src/app/shared/services/car.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class SearchComponent implements OnInit {
   searchForm: FormGroup;

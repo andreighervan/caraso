@@ -38,12 +38,6 @@ $gray: gray;
         min-width: 8.43rem; //135px
         height: 3.125rem; //50px
         font-size: 1.12rem; // 18px
-        @media (max-width: 1281px) {
-            height: 2.37rem; //38px
-            min-width: 6.43rem; //103px
-            font-size: 0.81rem; //13.7
-            padding: 0 0.75rem; //12.2px
-        }
         &:disabled {
             background: $gray;
             color: $white;
@@ -62,15 +56,6 @@ $gray: gray;
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
-
-@media (min-width: 1281px) {
-    /* ratio 1680/1281=1.31 */
-    .btn {
-        height: 2.37rem; //38px
-        width: 6.43rem; //103px
-        font-size: 0.81rem; //13.7
-    }
-}
 
 /* 
   ##Device = Laptops, Desktops

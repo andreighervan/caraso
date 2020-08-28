@@ -13,7 +13,7 @@ export class CarItemComponent implements OnInit, OnChanges {
   searchByKeyword: string;
   cars;
   filteredCars: Car[] = [];
-  groupFilters: CarFilter;
+  groupFilters: Car;
 
   constructor(private serviceCar: CarService) { }
 

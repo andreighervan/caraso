@@ -43,3 +43,16 @@ $caraso-typography: mat-typography-config(
 
 // Override typography for all Angular Material, including mat-base-typography and all components.
 @include angular-material-typography($caraso-typography);
+
+h1.section-title {
+  font-size: 36px;
+  color: $gray1;
+  &::after {
+    content: url("/assets/img/bottom-heading.png");
+    display: block;
+    margin-top: -5px;
+  }
+  span {
+    color: $orange1;
+  }
+}

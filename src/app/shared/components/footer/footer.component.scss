@@ -10,7 +10,7 @@ footer {
       p {
         color: $color-gray-secondary;
         font-family: OpenSansRegular, Arial, sans-serif;
-        line-height: 26px;;
+        line-height: 26px;
       }
       h5 {
         text-transform: uppercase;
@@ -75,6 +75,7 @@ footer {
       p {
         color: $color-gray-secondary;
         font-family: OpenSansRegular, Arial, sans-serif;
+        font-size: 14px;
       }
       .nav-footer {
         li {
@@ -82,6 +83,7 @@ footer {
           margin-left: 1.25rem;
           a {
             color: $color-white;
+            font-size: 14px;
           }
         }
       }

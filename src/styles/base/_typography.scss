@@ -67,9 +67,10 @@ h5 {
 h1.section-title {
   font-size: 36px;
   color: $gray-color-text;
-  &::before {
-    content: url("../../assets/img/bottom-heading.png");
-    position: absolute;
+  &::after {
+    content: url("/assets/img/bottom-heading.png");
+    display: block;
+    margin-top: -5px;
   }
   span {
     color: $orange-color-text;
