@@ -15,7 +15,7 @@ export class CarItemComponent implements OnInit, OnChanges {
   filteredCars: Car[] = [];
   groupFilters: Car;
 
-  constructor(private serviceCar: CarService) { }
+  constructor(private carService: CarService) { }
 
   ngOnInit(): void {
     this.fetchCars();
@@ -26,7 +26,7 @@ export class CarItemComponent implements OnInit, OnChanges {
   }
 
   getFilteredCars() {
-    this.serviceCar.searchFilters.subscribe(data => {
+    this.carService.searchFiltersAction.subscribe(data => {
       this.groupFilters = data;
     }, error => console.log(error));
   }
@@ -49,7 +49,7 @@ export class CarItemComponent implements OnInit, OnChanges {
   }
 
   fetchCars() {
-    this.serviceCar.getCars().subscribe(carsArray => {
+    this.carService.getCars().subscribe(carsArray => {
       this.cars = carsArray.map(item => {
         const id = item.payload.doc.id;
         const cars = item.payload.doc.data() as Car;

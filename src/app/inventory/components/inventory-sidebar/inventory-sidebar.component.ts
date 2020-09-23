@@ -45,7 +45,7 @@ export class InventorySidebarComponent implements OnInit {
     console.log('value', model, make);
 
     Object.keys(filters).forEach(key => filters[key] === '' ? delete filters[key] : key);
-    this.carService.searchFilters.next(filters);
+    this.carService.setFilters(filters);
     this.route.navigateByUrl('/inventory');
   }
 }

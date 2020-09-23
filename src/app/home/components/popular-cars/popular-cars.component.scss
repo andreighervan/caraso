@@ -3,7 +3,9 @@
 .popular-cars {
   padding: 3.75rem 0;
   .car {
-    h4.heading--price {
+    text-align: center;
+    h4.price {
+      font-size: 20px;
       position: absolute;
       color: $color-white;
       background: $orange-color-text;
@@ -13,13 +15,15 @@
     }
     figcaption {
       .subheading {
+        text-align: left;
         text-transform: uppercase;
         margin: 1.8rem 0;
         font-family: ProximaNovaBold, Arial, sans-serif;
       }
-      p.paragraph {
+      p.car-name {
         font-family: OpenSansRegular, Arial, sans-serif;
         color: $color-grey-tertiary;
+        float: left;
         line-height: 20px;
         margin-bottom: 1rem;
       }

@@ -1,77 +1,14 @@
-@import "../abstracts/variables";
+$white: "#ffffff";
+$yellow: "#ffc107";
 
-.btn {
-  color: $color-white;
-  height: 40px;
-  font-size: 14px;
-  border-radius: 4px;
-  font-style: italic;
-  padding: 0 30px;
-  &:hover {
-    opacity: 0.9;
-    background: inherit;
-  }
-}
-
-.btn-warning {
-  background: $orange-color-text;
-}
-
-.btn-outline-dark {
-  color: $gray-color-text;
-  border: 1px solid $gray-color-text;
-  &:hover {
-    color:inherit;
-    opacity: 0.9;
-  }
-}
-
-$white: #ffffff;
-$blue: blue;
-$gray: gray;
-
-.btn {
-    &.mat-raised-button,
-    &.mat-button,
-    &.mat-stroked-button,
-    &.mat-flat-button {
-        min-width: 8.43rem; //135px
-        height: 3.125rem; //50px
-        font-size: 1.12rem; // 18px
-        &:disabled {
-            background: $gray;
-            color: $white;
-        }
+%button {
+    height: 3rem;
+    min-width: 19rem;
+    font-weight: 500;
+    .mat-raised-button:not([disabled]) {
+        color: $white;
+    }
+    .mat-stroked-button:not([disabled]) {
+        border-color: 2px solid $yellow;
     }
 }
-
-.btn-primary {
-    color: $white;
-    background: $blue;
-}
-
-/* Media Queries */
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-    //CSS
-}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    //CSS
-}
-

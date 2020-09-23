@@ -7,7 +7,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CarService {
-  searchFilters = new BehaviorSubject<Car>(null);
+  private searchFiltersSubject$ = new BehaviorSubject<Car>(null);
+  searchFiltersAction = this.searchFiltersSubject$.asObservable();
+
   constructor(private firestore: AngularFirestore) { }
 
   getCars() {
@@ -34,6 +36,10 @@ export class CarService {
       phone: contactDetails.phone,
       notes: contactDetails.notes
     });
+  }
+
+  setFilters(car: Car) {
+    this.searchFiltersSubject$.next(car);
   }
 
 }

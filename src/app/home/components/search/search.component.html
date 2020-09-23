@@ -1,4 +1,4 @@
-<section class="search">
+<section class="search-car">
   <div class="container">
     <h1 class="text-center section-title">SEARCH <span>MY CAR</span></h1>
     <form [formGroup]="searchForm" novalidate>
@@ -12,7 +12,7 @@
           </div> -->
           <mat-form-field appearance="fill" class="search-dropdown">
             <mat-label>Make</mat-label>
-            <mat-select formControlName="make">
+            <mat-select formControlName="make" disableOptionCentering panelClass="dropdown">
               <mat-option *ngFor="let make of makes" [value]="make.value">
                 {{make.viewValue}}
               </mat-option>
@@ -30,7 +30,7 @@
           </div> -->
           <mat-form-field appearance="fill" class="search-dropdown">
             <mat-label>Model</mat-label>
-            <mat-select formControlName="make">
+            <mat-select formControlName="make" disableOptionCentering panelClass="dropdown">
               <mat-option *ngFor="let model of models" [value]="model.value">
                 {{model.viewValue}}
               </mat-option>
@@ -56,7 +56,7 @@
           </div>
         </div> -->
         <div class="col-md-3 col-sm-6 col-xs-12">
-          <button (click)="search(searchForm.value)" class="search-btn">SEARCH</button>
+          <button (click)="search(searchForm.value)" class="search-car-btn">SEARCH</button>
         </div>
       </div>
     </form>

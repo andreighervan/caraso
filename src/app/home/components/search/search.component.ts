@@ -8,8 +8,7 @@ import { CarService } from 'src/app/shared/services/car.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
   searchForm: FormGroup;
@@ -46,7 +45,7 @@ export class SearchComponent implements OnInit {
     console.log('value', models, make);
 
     Object.keys(filters).forEach(key => filters[key] === '' ? delete filters[key] : key);
-    this.carService.searchFilters.next(filters);
+    this.carService.setFilters(filters);
     this.route.navigateByUrl('/inventory');
   }
 }

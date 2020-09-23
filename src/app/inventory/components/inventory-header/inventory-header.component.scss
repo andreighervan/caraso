@@ -3,8 +3,8 @@
 .inventory-header {
   border-bottom: 1px solid $color-gray-secondary;
   .inventory-header-inner {
-    margin-top: 7.7rem;
-    margin-bottom: 2rem;
+    margin-top: 4.8125rem;
+    margin-bottom: 1.25rem;
     .inventory-title {
       text-transform: uppercase;
       color: #666666;
@@ -16,16 +16,16 @@
       .inventory-dropdown {
         position: relative;
         border-radius: 3px;
-        height: 4rem;
+        height: 2.5rem;
         select {
           background-color: #f0f0f0;
           color: #666666;
           padding: 10px 15px 10px 20px;
           width: 200px;
-          height: 4rem;
+          height: 2.5rem;
           border: none;
           font-family: ProximaNovaRegular, Arial, sans-serif;
-          font-size: 1.4rem;
+          font-size: 14px;
           -webkit-appearance: none;
           appearance: none;
           outline: none;
@@ -59,8 +59,8 @@
       button.inventory-list {
         border:none;
         outline:none;
-        height: 4rem;
-        width: 4rem;
+        height: 2.5rem;
+        width: 2.5rem;
       }
       button.inventory-grid {
         background: #ffffff;

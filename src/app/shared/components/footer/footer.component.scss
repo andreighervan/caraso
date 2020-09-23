@@ -2,23 +2,23 @@
 
 footer {
   .top-footer {
-    background: $gray-color-text;
+    background: $gray1;
     position: relative;
     padding: 9.375rem 0 4.375rem 0;
     z-index: 100;
     .box {
       p {
-        color: $color-gray-secondary;
+        color: $gray5;
         font-family: OpenSansRegular, Arial, sans-serif;
         line-height: 26px;
       }
       h5 {
         text-transform: uppercase;
-        color: $orange-color-text;
+        color: $orange1;
         font-style: italic;
         margin-bottom: 3rem;
         span {
-          color: $color-white;
+          color: $white;
         }
       }
       .social-links {
@@ -29,11 +29,11 @@ footer {
             a {
               margin-right: 1rem;
               i {
-                color: $color-gray-secondary;
-                background: $color-gray-hover;
-                height: 2.5rem;
-                width: 2.5rem;
-                line-height: 2.5rem;
+                color: $gray5;
+                background: $gray1;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
                 text-align: center;
                 font-size: 14px;
               }
@@ -43,7 +43,7 @@ footer {
       }
       .contact {
         i {
-          color: $orange-color-text;
+          color: $orange1;
           margin-right: 0.5rem;
         }
       }
@@ -69,11 +69,11 @@ footer {
     }
   }
   .bottom-footer {
-    background: $color-gray-hover;
+    background: $gray1;
     .footer-content {
       min-height: 4.375rem;
       p {
-        color: $color-gray-secondary;
+        color: $gray5;
         font-family: OpenSansRegular, Arial, sans-serif;
         font-size: 14px;
       }
@@ -82,7 +82,7 @@ footer {
           display: inline-block;
           margin-left: 1.25rem;
           a {
-            color: $color-white;
+            color: $white;
             font-size: 14px;
           }
         }
