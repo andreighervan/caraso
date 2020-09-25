@@ -1,4 +1,6 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { combineLatest, EMPTY, Observable, pipe, Subject, Subscription } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { Car } from '../../../../shared/models/car';
 import { CarService } from '../../../../shared/services/car.service';
 
@@ -7,7 +9,17 @@ import { CarService } from '../../../../shared/services/car.service';
   templateUrl: './car-item.component.html',
   styleUrls: ['./car-item.component.scss']
 })
-export class CarItemComponent implements OnInit, OnChanges {
+export class CarItemComponent implements OnInit, OnChanges, OnDestroy {
+
+  private errorMessageSubject = new Subject<string>();
+  errorMessage$ = this.errorMessageSubject.asObservable();
+
+  filteredCars$;
+
+  errorMessage: string;
+
+  sub: Subscription;
+
   addedToCompare: boolean;
 
   searchByKeyword: string;
@@ -20,6 +32,30 @@ export class CarItemComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.fetchCars();
     this.getFilteredCars();
+
+    this.filteredCars$ = combineLatest([
+      this.carService.getCars(),
+      this.carService.searchFiltersAction
+    ]).pipe(
+      map(cars => console.log('cars', cars)),
+      catchError(err => {
+        this.errorMessageSubject.next(err);
+        return EMPTY;
+      })
+    );
+
+    this.sub = this.carService.getCars()
+      .pipe(
+        tap(cars => console.log('cars', cars))
+      )
+      .subscribe(
+        cars => this.cars = cars,
+        error => this.errorMessage = error
+      );
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 
   ngOnChanges(): void {

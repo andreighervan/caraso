@@ -4,7 +4,7 @@
   padding: 6rem 0;
   aside {
     background: $color-black-one;
-    padding: 3rem;
+    padding: 1.875rem;
     color: $color-white;
     hr {
       background: $orange-color-text;
@@ -16,11 +16,11 @@
       }
     }
     .contact-details {
-      margin-top: 2rem;
+      margin-top: 1.25rem;
       i {
         color: $orange-color-text;
         font-size: 37px;
-        margin-right: 1rem;
+        margin-right: 10px;
         margin-top: 5px;
       }
       .contact-box {
@@ -57,11 +57,11 @@
           padding-left:7px;
         }
         input {
-          height: 4rem;
+          height: 2.5rem;
         }
         label {
-          font-size: 1.4rem;
-          margin-top: 3rem;
+          font-size: 14px;
+          margin-top: 1.875rem;
           text-transform: uppercase;
           font-family: OpenSansRegular, Arial, sans-serif;
           color: $gray-color-text;
@@ -75,10 +75,10 @@
         color: $color-white;
         font-family: ProximaNovaBold, Arial, sans-serif;
         border-radius: 4px;
-        padding: 1rem 4rem;
+        padding: 10px 40px;
         outline: none;
         border: none;
-        margin-top: 3rem;
+        margin-top: 1.875rem;
         margin-bottom: 0.5rem;
       }
     }

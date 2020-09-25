@@ -2,25 +2,26 @@
 
 .breadcrumb {
   padding: 3.125rem 0;
-  background: $color-black-one;
+  background: $black1;
   margin: 0;
   h1.heading-breadcrumb {
     text-transform: uppercase;
-    color: $color-white;
+    color: white;
     span {
-      color: $orange-color-text;
+      color: $orange1;
     }
   }
   .breadcrumb-list {
     .breadcrumb-icon {
       i {
-        color: $orange-color-text;
+        color: $orange1;
       }
     }
     li {
       a {
-        color: $color-white;
+        color: white;
         padding-left: 16px;
+        font-size: 14px;
       }
     }
   }

@@ -41,9 +41,6 @@ export class SearchComponent implements OnInit {
   }
 
   search(filters: Car): void {
-    const { models, make } = this.searchForm.value;
-    console.log('value', models, make);
-
     Object.keys(filters).forEach(key => filters[key] === '' ? delete filters[key] : key);
     this.carService.setFilters(filters);
     this.route.navigateByUrl('/inventory');

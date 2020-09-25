@@ -1,9 +1,9 @@
 @import "main.scss";
 
 .posts {
-  padding: 6rem 0;
+  padding: 3.75rem 0;
   img.search__img {
-    margin-bottom: 5rem;
+    margin-bottom: 3.125rem;
   }
   .carousel-item {
     @media (min-width: 576px) {
@@ -11,7 +11,7 @@
     }
     .post {
       figcaption {
-        padding: 2rem;
+        padding: 1.25rem;
         background: $color-grey-fourth;
         i {
           color: $orange-color-text;
@@ -22,13 +22,14 @@
         }
         p {
           color: $color-grey-tertiary;
-          margin-right: 1.3rem;
+          margin-right: 0.8125rem;
+          font-size:14px;
         }
       }
     }
   }
   .carousel-indicators {
-    bottom: -35px;
+    bottom: -2.1875rem;
     li {
       height: 0.7rem;
       border-radius: 0;

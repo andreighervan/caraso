@@ -69,7 +69,7 @@ footer {
     }
   }
   .bottom-footer {
-    background: $gray1;
+    background: $gray3;
     .footer-content {
       min-height: 4.375rem;
       p {
@@ -82,7 +82,7 @@ footer {
           display: inline-block;
           margin-left: 1.25rem;
           a {
-            color: $white;
+            color: white;
             font-size: 14px;
           }
         }

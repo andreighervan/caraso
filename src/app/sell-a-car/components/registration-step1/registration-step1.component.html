@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-4">
             <div class="form-field" formGroupName="carDetails">
-                <label for="make">Make</label>
+                <label for="make">Make <span class="color-danger">*</span></label>
                 <select formControlName="make">
                     <option value="" selected>Make</option>
                     <option *ngFor="let make of makes" [value]="make.value">{{make.viewValue}}</option>
@@ -11,7 +11,7 @@
         </div>
         <div class="col-sm-12 col-md-4">
             <div class="form-field" formGroupName="carDetails">
-                <label for="model">Model</label>
+                <label for="model">Model <span class="color-danger">*</span></label>
                 <select formControlName="model">
                     <option value="" selected>Model</option>
                     <option *ngFor="let model of models" [value]="model.value">{{model.viewValue}}</option>

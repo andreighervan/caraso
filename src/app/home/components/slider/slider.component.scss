@@ -11,15 +11,15 @@
           filter: brightness(50%);
         }
         .carousel-caption {
-          width: 39rem;
+          width: 24.375rem;
           padding: 0;
           text-align: left;
           position: absolute;
           top: 50%;
-          left: 15rem;
+          left: 9.375rem;
           transform: translateY(-50%);
           h2 {
-            margin: 1.5rem 0;
+            margin: 15px 0;
             color: $color-white;
             font-weight: bold;
             span {
@@ -27,8 +27,8 @@
             }
           }
           .skew-car-title {
-            width: 43rem;
-            padding: 1rem 2rem;
+            width: 26.875rem;
+            padding: 0.625rem 1.25rem;
             margin-top: 0.5rem;
             background: $color-white;
             transform: skewX(-25deg);
@@ -46,7 +46,7 @@
           }
           .skew {
             transform: skewX(-25deg);
-            padding: 1rem;
+            padding: 10px;
             h1,
             h5,
             h3 {
@@ -58,7 +58,7 @@
               }
             }
             h1 {
-              width: 59rem;
+              width: 36.875rem;
               color: $orange-color-text;
             }
             h3,
@@ -66,26 +66,30 @@
               color: $color-white;
             }
             h5 {
-              width: 50px;
+              width: 3.125rem;
             }
             h2 {
-              width: 220px;
+              width: 13.75rem;
             }
           }
           .label-new {
-            margin-left: 3.1rem;
-            margin-right: 0.5rem;
+            margin-left: 40px;
+            margin-right: 5px;
+            background: $orange1;
+          }
+          .price-label{
+            background: $gray1;
           }
           button.btn-learn-more {
-            font-size: 1.8rem;
-            line-height: 1.7rem;
-            margin-right: 1rem;
+            font-size: 18px;
+            line-height: 18px;
+            margin-right: 0.625rem;
             color: $color-white;
             background: $gray-color-text;
             transform: skewX(-25deg);
             border: none;
             outline: none;
-            padding: 1rem 1.5rem;
+            padding: 10px 15px;
             float: right;
             h5 {
               transform: skewX(25deg);
@@ -98,9 +102,9 @@
       }
     }
     ol.carousel-indicators {
-      margin-bottom: 4rem;
+      margin-bottom: 2.5rem;
       li {
-        width: 3rem;
+        width: 1.875rem;
         border-radius: 0;
         height: 0.5rem;
         transform: skewX(-25deg);
