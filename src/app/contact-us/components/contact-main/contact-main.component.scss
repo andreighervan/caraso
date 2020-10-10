@@ -10,20 +10,13 @@
       background: $color-grey-fourth;
       padding-top: 1.25rem;
       padding-bottom: 2.5rem;
-      h2.contact-title {
-        color: $gray-color-text;
-        text-transform: uppercase;
-        padding-left: 1.875rem;
-        span {
-          color: $orange-color-text;
-        }
-      }
       form {
         padding: 0 1.875rem 0 1.875rem;
         .form-group {
           margin-bottom: 1.625rem;
           label {
             font-size: 14px;
+            margin-bottom:10px;
             color: $gray-color-text;
             font-family: OpenSansRegular, Arial, sans-serif;
             text-transform: uppercase;
@@ -74,14 +67,6 @@
         height: 100%;
         padding-top: 1.25rem;
         padding-bottom: 2.5rem;
-        h2.contact-title {
-          color: $gray-color-text;
-          text-transform: uppercase;
-          padding-left: 1.875rem;
-          span {
-            color: $orange-color-text;
-          }
-        }
         .contact-info {
           display: flex;
           justify-content: flex-start;
@@ -99,6 +84,8 @@
             p.info-title {
               color: $orange-color-text;
               font-size: 12px;
+              margin-bottom:6px;
+              font-weight: bold;
             }
             h6.info-text {
               color: $gray-color-text;
@@ -106,6 +93,19 @@
             }
           }
         }
+      }
+    }
+    hr.hr-contact {
+      margin: 1.0625rem 0 2.3125rem 0;
+    }
+    h2.contact-title {
+      color: $gray-color-text;
+      text-transform: uppercase;
+      padding-left: 1.875rem;
+      font-style: italic;
+      font-weight: bold;
+      span {
+        color: $orange-color-text;
       }
     }
   }

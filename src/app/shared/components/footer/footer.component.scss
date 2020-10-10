@@ -11,14 +11,16 @@ footer {
         color: $gray5;
         font-family: OpenSansRegular, Arial, sans-serif;
         line-height: 26px;
+        font-size: 14px;
       }
       h5 {
+        font-size: 18px;
         text-transform: uppercase;
         color: $orange1;
         font-style: italic;
         margin-bottom: 3rem;
         span {
-          color: $white;
+          color: white;
         }
       }
       .social-links {
@@ -30,7 +32,7 @@ footer {
               margin-right: 1rem;
               i {
                 color: $gray5;
-                background: $gray1;
+                background: $gray3;
                 height: 40px;
                 width: 40px;
                 line-height: 40px;
@@ -71,7 +73,7 @@ footer {
   .bottom-footer {
     background: $gray3;
     .footer-content {
-      min-height: 4.375rem;
+      min-height: 70px;
       p {
         color: $gray5;
         font-family: OpenSansRegular, Arial, sans-serif;

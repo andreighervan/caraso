@@ -35,36 +35,33 @@ header.header {
         }
       }
     }
-    .select-header {
+    .dropdown-header {
+      padding:0;
+      position: relative;
+      display: inline-block;
       font-size: 14px;
       font-family: sans-serif;
       font-weight: 700;
       color: $gray4;
       background: none;
       min-width: 40px;
-      box-sizing: border-box;
       margin: 0;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      appearance: none;
-      background-color: #fff;
+      background-color: transparent;
+      cursor: pointer;
+      .dropdown-content {
+        top: 44px;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 74px;
+        z-index: 1;
+        ul{
+          min-width: 40px;
+          padding:0;
+          margin:0;
+        }
+      }
     }
-    .select-header::-ms-expand {
-      display: none;
-    }
-    .select-header:hover {
-      border-color: #888;
-    }
-    .select-header:focus {
-      border-color: #aaa;
-      box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
-      box-shadow: 0 0 0 3px -moz-mac-focusring;
-      color: #222;
-      outline: none;
-    }
-    .select-header option {
-      background: none;
-    }
+
     button.btn-search {
       background: $gray3;
       color: $gray2;

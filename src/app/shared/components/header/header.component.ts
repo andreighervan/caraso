@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from 'src/app/auth/components/login/login.component';
@@ -10,10 +11,22 @@ import { RegisterComponent } from 'src/app/auth/components/register/register.com
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
+  menu = {
+    LANGMENU : false,
+    CURRMENU : false
+  }
 
+  languages = [
+    { value: 'ENGLISH', viewValue: 'ENG' },
+    { value: 'FRENCH', viewValue: 'FR' }
+  ]
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openMenu(menu): void {
+    this.menu[menu] = !this.menu[menu];
   }
 
   openLogin(): void {
@@ -25,7 +38,6 @@ export class HeaderComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
-
 
   openRegister(): void {
     const dialogRef = this.dialog.open(RegisterComponent, {

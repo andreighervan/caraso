@@ -28,14 +28,25 @@
           </div>
         </div>
         <div class="col-lg-3 text-center text-lg-right">
-          <select class="select-header">
-            <option value="ENG">ENG</option>
-            <option value="FR">FR</option>
-          </select>
-          <select class="select-header">
-            <option value="USD">USD</option>
-            <option value="POUND">POUND</option>
-          </select>
+          <div class="dropdown-header">
+            <button type="button" class="btn btn-default text-white" (click)="openMenu('LANGMENU')">ENG <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+            <div class="dropdown-content" *ngIf="menu.LANGMENU">
+              <ul>
+                <li><button type="button" class="btn btn-default">ENG</button></li>
+                <li><button type="button" class="btn btn-default">FR</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown-header">
+            <button type="button" class="btn btn-default text-white" (click)="openMenu('CURRMENU')">USD <i class="fa fa-angle-down"
+                aria-hidden="true"></i></button>
+            <div class="dropdown-content" *ngIf="menu.CURRMENU">
+              <ul>
+                <li><button type="button" class="btn btn-default">USD</button></li>
+                <li><button type="button" class="btn btn-default">POUND</button></li>
+              </ul>
+            </div>
+          </div>
           <button type="button" class="btn-search"><i class="fas fa-search"></i></button>
         </div>
       </div>
