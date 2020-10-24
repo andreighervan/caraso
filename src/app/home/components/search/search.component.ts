@@ -25,8 +25,8 @@ export class SearchComponent implements OnInit {
   ];
 
   constructor(private fb: FormBuilder,
-              private carService: CarService,
-              private route: Router) { }
+    private carService: CarService,
+    private route: Router) { }
 
   ngOnInit() {
     this.buildSearchForm();
