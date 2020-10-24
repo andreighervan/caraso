@@ -1,0 +1,55 @@
+// buttons
+
+$input-btn-padding-y: 0.375rem !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-font-family: null !default;
+$input-btn-font-size: $font-size-base !default;
+$input-btn-line-height: $line-height-base !default;
+
+$input-btn-focus-width: 0.25rem !default;
+$input-btn-focus-color-opacity: 0.25 !default;
+$input-btn-focus-color: null;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-btn-padding-y-sm: 0.25rem !default;
+$input-btn-padding-x-sm: 0.5rem !default;
+$input-btn-font-size-sm: $font-size-sm !default;
+
+$input-btn-padding-y-lg: 0.5rem !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-font-size-lg: $font-size-lg !default;
+$border-width: 1px !default;
+
+$input-btn-border-width: $border-width !default;
+
+$btn-padding-y: $input-btn-padding-y !default;
+$btn-padding-x: $input-btn-padding-x !default;
+$btn-font-family: $input-btn-font-family !default;
+$btn-font-size: $input-btn-font-size !default;
+$btn-line-height: $input-btn-line-height !default;
+$btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-sm: $input-btn-padding-y-sm !default;
+$btn-padding-x-sm: $input-btn-padding-x-sm !default;
+$btn-font-size-sm: $input-btn-font-size-sm !default;
+
+$btn-padding-y-lg: $input-btn-padding-y-lg !default;
+$btn-padding-x-lg: $input-btn-padding-x-lg !default;
+$btn-font-size-lg: $input-btn-font-size-lg !default;
+
+$btn-border-width: $input-btn-border-width !default;
+
+$btn-font-weight: $font-weight-normal !default;
+$btn-box-shadow: null;
+$btn-focus-width: $input-btn-focus-width !default;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$btn-disabled-opacity: 0.65 !default;
+
+$btn-link-color: white !default;
+$btn-link-hover-color: white !default;
+$btn-link-disabled-color: gray !default;
+
+$btn-block-spacing-y: 0.5rem !default;
+
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !default;

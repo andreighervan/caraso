@@ -1,5 +1,15 @@
 // colors
 
+$dark: #22292d;
+$orange: #e57632;
+$gray1: #111416;
+
+$theme-colors: (
+  "orange": $orange,
+  "dark": $dark,
+  "gray": $gray1,
+) !default;
+
 $gray1: #22292d;
 $gray2: #ebeff0;
 $gray3: #343c40;

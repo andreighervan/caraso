@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: ProximaNovaRegular;
   src: url("/assets/fonts/ProximaNova-Regular.otf");
@@ -28,31 +30,58 @@
   src: url("/assets/fonts/OpenSans-Bold.ttf");
 }
 
-// Define a caraso typography config that overrides the font-family as well as the
-// `headlines` and `body-1` levels.
-$caraso-typography: mat-typography-config(
-  $font-family: 'ProximaNovaBold, Arial, sans-serif;',
-  $headline: mat-typography-level(18px, 36px, 60px, 700),
-  $body-1: mat-typography-level(12px, 14px, 700)
-);
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
 
-@include mat-base-typography($caraso-typography);
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-// Override typography for a specific Angular Material components.
-@include mat-checkbox-typography($caraso-typography);
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
 
-// Override typography for all Angular Material, including mat-base-typography and all components.
-@include angular-material-typography($caraso-typography);
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
 
-h1.section-title {
-  font-size: 36px;
-  color: $gray1;
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 3 !default;//48px
+$h2-font-size: $font-size-base * 2.25 !default;//36px
+$h3-font-size: $font-size-base * 1.87 !default;//30px
+$h4-font-size: $font-size-base * 1.5 !default;//24px
+$h5-font-size: $font-size-base * 1.12 !default;//18px
+$h6-font-size: $font-size-base * 0.875 !default;//14px
+
+$headings-margin-bottom: 0 !default;
+$headings-font-family: ProximaNovaBold !default;
+$headings-font-style: null !default;
+$headings-font-weight: 700 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$lead-font-size: $font-size-base !default;//16px
+
+p {
+  font-family: OpenSansRegular;
+}
+
+.bottom-img {
   &::after {
     content: url("/assets/img/bottom-heading.png");
     display: block;
     margin-top: -5px;
-  }
-  span {
-    color: $orange1;
   }
 }
