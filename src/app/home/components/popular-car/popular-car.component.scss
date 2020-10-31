@@ -1,89 +1,84 @@
 @import "main.scss";
 
-.popular-cars {
-  .car {
-    text-align: center;
-    h4.price {
-      font-size: 20px;
-      position: absolute;
-      color: $color-white;
-      background: $orange-color-text;
-      right: 0;
-      bottom: 2rem;
-      padding: 0.4rem 1.4rem;
-    }
-    figcaption {
-      .subheading {
-        text-align: left;
-        text-transform: uppercase;
-        margin: 1.8rem 0;
-        font-family: ProximaNovaBold, Arial, sans-serif;
-      }
-      p.car-name {
-        font-family: OpenSansRegular, Arial, sans-serif;
-        color: $color-grey-tertiary;
-        float: left;
-        line-height: 20px;
-        margin-bottom: 1rem;
-      }
-      i {
-        color: $color-white;
-        background: $color-gray-secondary;
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        font-size: 11px;
-        text-align: center;
-        line-height: 20px;
-        margin-right: 10px;
-      }
-      .right-car {
-        margin-left: 3.75rem;
-      }
-    }
+.car {
+  h4.price {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    padding: 0.4rem 1.4rem;
   }
-  .btn-show-all {
-    border: 1px solid $gray-color-text;
-    background: $color-white;
-    padding: 15px 40px;
-    border-radius: 4px;
-    line-height: 1;
-    margin-top: 2.5rem;
-    i {
-      color: $orange-color-text;
-      font-size: 14px;
-    }
-    &:focus {
-      outline: none;
-    }
-    &:hover {
-      background: darken($color-white, 10%);
-    }
-  }
-  ::ng-deep ngb-tabset ul {
-    margin-bottom: 3.75rem;
-    margin-top: 2.5rem;
-    border-bottom: none;
-    li {
-      color: #666666;
+  figcaption {
+    .subheading {
+      text-align: left;
       text-transform: uppercase;
-      margin-right: 5px;
-      border-radius: 5px;
+      margin: 1.8rem 0;
       font-family: ProximaNovaBold, Arial, sans-serif;
-      a.nav-link .active,
-      a.nav-link {
-        border: none;
-        line-height: 1.875rem;
-        padding: 0 1.25rem;
-      }
-      a.nav-link {
-        color: #666666;
-        background: #e0e0e0;
-        border-radius: 4px;
-        &.active {
-          color: #ffffff;
-          background: #e57632;
-        }
+    }
+    p.car-name {
+      font-family: OpenSansRegular, Arial, sans-serif;
+      color: $color-grey-tertiary;
+      float: left;
+      line-height: 20px;
+      margin-bottom: 1rem;
+    }
+    i {
+      color: $color-white;
+      background: $color-gray-secondary;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      font-size: 11px;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+    .right-car {
+      margin-left: 3.75rem;
+    }
+  }
+}
+.btn-show-all {
+  border: 1px solid $gray-color-text;
+  background: $color-white;
+  padding: 15px 40px;
+  border-radius: 4px;
+  line-height: 1;
+  margin-top: 2.5rem;
+  i {
+    color: $orange-color-text;
+    font-size: 14px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: darken($color-white, 10%);
+  }
+}
+::ng-deep ngb-tabset ul {
+  margin-bottom: 3.75rem;
+  margin-top: 2.5rem;
+  border-bottom: none;
+  li {
+    color: #666666;
+    text-transform: uppercase;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-family: ProximaNovaBold, Arial, sans-serif;
+    a.nav-link .active,
+    a.nav-link {
+      border: none;
+      line-height: 1.875rem;
+      padding: 0 1.25rem;
+    }
+    a.nav-link {
+      color: #666666;
+      background: #e0e0e0;
+      border-radius: 4px;
+      &.active {
+        color: #ffffff;
+        background: #e57632;
       }
     }
   }

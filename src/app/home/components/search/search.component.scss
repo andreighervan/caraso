@@ -1,14 +1,6 @@
 @import "main.scss";
 
 .search-car {
-  background: $gray-color-text;
-  padding: 6rem 0 4.5rem 0;
-  h1.section-title {
-    color: $color-white;
-    span {
-      color: $orange-color-text;
-    }
-  }
   &-btn {
     font-size: 14px;
     height: 59px;

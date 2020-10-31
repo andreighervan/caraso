@@ -1,47 +1,45 @@
 @import "main.scss";
 
 .posts {
-  padding: 3.75rem 0;
-  img.search__img {
-    margin-bottom: 3.125rem;
-  }
-  .carousel-item {
-    @media (min-width: 576px) {
-      margin-right: 0;
+    img.search__img {
+        margin-bottom: 3.125rem;
     }
-    .post {
-      figcaption {
-        padding: 1.25rem;
-        background: $color-grey-fourth;
-        i {
-          color: $orange-color-text;
-          margin-right: 0.5rem;
+    .carousel-item {
+        @media (min-width: 576px) {
+            margin-right: 0;
         }
-        hr {
-          background: $orange-color-text;
+        .post {
+            figcaption {
+                padding: 1.25rem;
+                background: $color-grey-fourth;
+                i {
+                    color: $orange-color-text;
+                    margin-right: 0.5rem;
+                }
+                hr {
+                    background: $orange-color-text;
+                }
+                p {
+                    color: $color-grey-tertiary;
+                    margin-right: 0.8125rem;
+                    font-size: 14px;
+                }
+            }
         }
-        p {
-          color: $color-grey-tertiary;
-          margin-right: 0.8125rem;
-          font-size:14px;
-        }
-      }
     }
-  }
-  .carousel-indicators {
-    bottom: -2.1875rem;
-    li {
-      height: 0.7rem;
-      border-radius: 0;
-      transform: skewX(-25deg);
-      background-color: $color-grey-fifth;
-      &.active {
-        background-color: $orange-color-text;
-      }
+    .carousel-indicators {
+        bottom: -2.1875rem;
+        li {
+            height: 0.7rem;
+            border-radius: 0;
+            transform: skewX(-25deg);
+            background-color: $color-grey-fifth;
+            &.active {
+                background-color: $orange-color-text;
+            }
+        }
     }
-  }
 }
-
 
 /*
     code by Iatek LLC 2018 - CC 2.0 License - Attribution required
@@ -52,7 +50,7 @@
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
-        right: -33.3333%;  /*change this with javascript in the future*/
+        right: -33.3333%; /*change this with javascript in the future*/
         z-index: -1;
         display: block;
         visibility: visible;
@@ -63,7 +61,7 @@
     .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
-        right: -50%;  /*change this with javascript in the future*/
+        right: -50%; /*change this with javascript in the future*/
         z-index: -1;
         display: block;
         visibility: visible;
@@ -119,7 +117,10 @@
     .carousel-inner .active + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    .carousel-inner
+        .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+        + .carousel-item
+        + .carousel-item {
         transition: none;
     }
     .carousel-inner .carousel-item-next {
@@ -147,14 +148,18 @@
     .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
         display: block;
     }
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    .carousel-inner
+        .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)
+        + .carousel-item
+        + .carousel-item
+        + .carousel-item {
         transition: none;
     }
     /* Show 5th slide on lg if col-lg-3 */
     .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
         top: 0;
-        right: -25%;  /*change this with javascript in the future*/
+        right: -25%; /*change this with javascript in the future*/
         z-index: -1;
         display: block;
         visibility: visible;
