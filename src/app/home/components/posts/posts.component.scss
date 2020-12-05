@@ -14,15 +14,15 @@
                 background: $color-grey-fourth;
                 i {
                     color: $orange-color-text;
-                    margin-right: 0.5rem;
+                    margin-right: 0.4rem;
                 }
                 hr {
                     background: $orange-color-text;
                 }
-                p {
-                    color: $color-grey-tertiary;
-                    margin-right: 0.8125rem;
-                    font-size: 14px;
+                h6{
+                    margin-right:0.7375rem;
+                    font-weight:300;
+                    font-family:OpenSansRegular;
                 }
             }
         }

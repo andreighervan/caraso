@@ -1,103 +1,35 @@
 @import "main.scss";
 
-.testimonials {
-  display: flex;
-  justify-content: flex-start;
-  @media (max-width: 990px) {
-    display: block;
+.container-testimonials {
+  .pl-12 {
+    padding-left: 12%;
   }
-  .left-ts {
-    padding: 5rem 0;
-    background: $orange-color-text;
-    width: 50%;
-    padding-left: 5%;
-    padding-right: 7.7%;
-    @media (max-width: 990px) {
-      width: 100%;
-    }
-    .ts__heading--1 {
-      color: $color-black;
-      span {
-        color: $color-white;
-      }
-    }
-    p.paragraph {
-      margin-top: 1rem;
-      color: $gray-color-text;
-      line-height: 26px;
-    }
-    .choose-us-container {
-      .choose-us {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 2rem;
-        img {
-          margin-right: 2rem;
-        }
-        .choose-us-content {
-          flex: 1;
-          p {
-            color: $gray-color-text;
-            line-height: 26px;
-          }
-        }
-      }
-      h5.choose-heading {
-        color: $gray-color-text;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        span {
-          color: $color-white;
-        }
-      }
-    }
+  .pr-12{
+    padding-right:12%;
   }
-  .right-ts {
-    padding: 5rem 0;
-    background: $gray-color-secondary;
-    width: 50%;
-    padding-left: 8%;
-    @media (max-width: 990px) {
-      width: 100%;
+  .pl-8{
+    padding-left:8%;
+  }
+  h6{
+    line-height:1.9;
+    font-weight:normal;
+    font-family: OpenSansRegular;
+  }
+  .testimonial {
+    border: 1px solid $orange-color-text;
+    border-radius: 3px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    h6{
+      text-transform: uppercase;
+      font-weight: bold;
     }
-    .ts__heading--2 {
-      color: $orange-color-text;
-      span {
-        color: $color-white;
-      }
-    }
-    .testimonial {
-      border: 1px solid $orange-color-text;
-      border-radius: 3px;
-      padding: 3rem;
-      margin-bottom: 3rem;
-      width: 88%;
-      p.paragraph {
-        color: $color-white;
-        font-style: italic;
-        font-size: 1.6rem;
-        font-family: OpenSansRegular, Arial, Helvetica, sans-serif;
-        line-height: 26px;
-      }
-      .testimonial-footer {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 1.5rem;
-        img {
-          margin-right: 1rem;
-        }
-        .author {
-          p {
-            font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;
-            text-transform: uppercase;
-            &.p--primary {
-              color: $color-white;
-            }
-            &.p--secondary {
-              color: $orange-color-text;
-            }
-          }
-        }
+    .testimonial-footer {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 1.5rem;
+      img {
+        margin-right: 1rem;
       }
     }
   }

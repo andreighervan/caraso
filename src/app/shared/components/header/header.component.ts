@@ -11,11 +11,6 @@ import { RegisterComponent } from 'src/app/auth/components/register/register.com
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
-  menu = {
-    LANGMENU : false,
-    CURRMENU : false
-  }
-
   languages = [
     { value: 'ENGLISH', viewValue: 'ENG' },
     { value: 'FRENCH', viewValue: 'FR' }
@@ -23,10 +18,6 @@ export class HeaderComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
-  }
-
-  openMenu(menu): void {
-    this.menu[menu] = !this.menu[menu];
   }
 
   openLogin(): void {

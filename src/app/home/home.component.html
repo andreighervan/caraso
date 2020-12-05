@@ -1,7 +1,11 @@
+<!-- Header section -->
 <app-header></app-header>
+
+<!-- Slider section -->
 <app-slider></app-slider>
 
-<section class="search bg-dark py-60">
+<!-- Search section -->
+<section class="bg-dark py-60">
     <div class="container">
         <h2 class="text-center text-white font-italic bottom-img mt-n3">SEARCH <span class="text-orange">MY CAR</span>
         </h2>
@@ -9,29 +13,52 @@
     </div>
 </section>
 
-<section class="popular-cars py-60">
+<!-- Popular cars section -->
+<section class="py-60 popular-cars">
     <div class="container">
         <h2 class="text-center font-italic bottom-img mt-n3 mb-30">POPULAR <span class="text-orange">CARS</span></h2>
-        <div class="row">
-            <app-popular-car *ngFor="let car of cars" [carItem]="car" class="col-md-6 col-lg-3">
-            </app-popular-car>
-        </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-outline-dark" (click)="showAllCars()">SHOW ALL <i
-                    class="fas fa-plus"></i></button>
+        <ul class="nav nav-pills justify-content-center mb-60 mt-30">
+            <li class="active nav-item rounded mr-5"><a class="nav-link text-uppercase" data-toggle="tab" href="#all">All</a></li>
+            <li class="nav-item rounded mr-5"><a class="nav-link text-uppercase" data-toggle="tab" href="#new">New</a></li>
+            <li class="nav-item rounded"><a class="nav-link text-uppercase" data-toggle="tab" href="#used">Used</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="all" class="tab-pane active">
+                <app-popular-car [cars]="cars$ | async" (loadMoreEvent)="reloadCars()">
+                </app-popular-car>
+            </div>
+            <div id="new" class="tab-pane">
+                <app-popular-car [cars]="newCars$ | async" (loadMoreEvent)="reloadCars()">
+                </app-popular-car>
+            </div>
+            <div id="used" class="tab-pane">
+                <app-popular-car [cars]="usedCars$ | async" (loadMoreEvent)="reloadCars()">
+                </app-popular-car>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Call to action section -->
 <app-cta></app-cta>
+
+<!-- Testimonials sections -->
 <app-testimonials></app-testimonials>
 
+<!-- Latest posts section -->
 <section class="posts py-60">
     <div class="container">
         <h2 class="text-center font-italic bottom-img mt-n3">LATEST <span class="text-orange">POSTS</span></h2>
         <app-posts></app-posts>
     </div>
 </section>
+
+<!-- Partners section -->
 <app-partners></app-partners>
+
+<!-- Map section -->
 <app-map></app-map>
+
+<!-- Footer section -->
 <app-footer></app-footer>

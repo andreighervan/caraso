@@ -1,0 +1,15 @@
+@import "main.scss";
+
+.popular-cars {
+    ul.nav-pills li {
+        a {
+            background: $gray6;
+            color: $gray7;
+            font-weight: bold;
+        }
+        &.active a {
+            background: $orange1;
+            color: white;
+        }
+    }
+}

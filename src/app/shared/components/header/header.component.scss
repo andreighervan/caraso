@@ -21,19 +21,6 @@ header.header {
       p {
         margin-bottom: 0;
       }
-      p.mat-body-1,
-      i {
-        color: $orange1;
-        margin-bottom: 0;
-        line-height: 1;
-      }
-      p.mat-body-2 {
-        color: $gray2;
-        text-transform: uppercase;
-        @media (max-width: 1200px) {
-          font-size: 12px;
-        }
-      }
     }
     .dropdown-header {
       padding:0;
@@ -110,3 +97,40 @@ header.header {
     }
   }
 }
+.dropbtn {
+  background-color: transparent;
+  color: $gray2;
+  font-size: 14px;
+  padding:12px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top:0 !important;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.dropdown-content ul li{
+   button {
+  background:transparent;
+  border:none;
+}
+ &:hover{
+    background:$gray5;
+    color:white;
+    button{
+      color:white;
+      font-weight:bold;
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {display: block;}

@@ -14,6 +14,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PartnersComponent } from './components/partners/partners.component';
 import { MapComponent } from './components/map/map.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   declarations: [HomeComponent, CtaComponent, PopularCarComponent,
@@ -22,6 +23,7 @@ import { ContactComponent } from './components/contact/contact.component';
   imports: [
     CommonModule,
     SharedModule,
+    HomeRoutingModule,
     ReactiveFormsModule
   ]
 })

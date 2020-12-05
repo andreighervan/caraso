@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ICar } from 'src/app/core/models/Cars';
 
 @Component({
@@ -8,11 +8,16 @@ import { ICar } from 'src/app/core/models/Cars';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PopularCarComponent implements OnInit {
-  @Input() carItem: ICar;
+  @Input() cars: ICar[];
 
-  constructor() { }
+  @Output()
+  loadMoreEvent = new EventEmitter();
 
   ngOnInit() {
+  }
+
+  loadMore() {
+    this.loadMoreEvent.emit();
   }
 
 }

@@ -7,44 +7,47 @@
             <div class="media pb-3 pb-md-0">
               <i class="fas fa-envelope"></i>
               <div class="media-body">
-                <p class="mat-body-1">EMAIL</p>
-                <p class="mat-body-2">automotor@domain.com</p>
+                <h6 class="text-orange">EMAIL</h6>
+                <h6 class="text-white">automotor@domain.com</h6>
               </div>
             </div>
             <div class="media pb-3 pb-md-0">
               <i class="fas fa-phone-alt"></i>
               <div class="media-body">
-                <p class="mat-body-1">PHONE</p>
-                <p class="mat-body-2">+407567890</p>
+                <h6 class="text-orange">PHONE</h6>
+                <h6 class="text-white">+407567890</h6>
               </div>
             </div>
             <div class="media">
               <i class="fas fa-globe-americas"></i>
               <div class="media-body">
-                <p class="mat-body-1">LOCATION</p>
-                <p class="mat-body-2">45 Queen's Park Rd, Brighton, UK</p>
+                <h6 class="text-orange">LOCATION</h6>
+                <h6 class="text-white">45 Queen's Park Rd, Brighton, UK</h6>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-3 text-center text-lg-right">
           <div class="dropdown-header">
-            <button type="button" class="btn btn-default text-white" (click)="openMenu('LANGMENU')">ENG <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            <div class="dropdown-content" *ngIf="menu.LANGMENU">
-              <ul>
-                <li><button type="button" class="btn btn-default">ENG</button></li>
-                <li><button type="button" class="btn btn-default">FR</button></li>
-              </ul>
+            <div class="dropdown">
+              <button class="dropbtn">ENG <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+              <div class="dropdown-content">
+                <ul>
+                  <li><button type="button">ENG</button></li>
+                  <li><button type="button">FR</button></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="dropdown-header">
-            <button type="button" class="btn btn-default text-white" (click)="openMenu('CURRMENU')">USD <i class="fa fa-angle-down"
-                aria-hidden="true"></i></button>
-            <div class="dropdown-content" *ngIf="menu.CURRMENU">
-              <ul>
-                <li><button type="button" class="btn btn-default">USD</button></li>
-                <li><button type="button" class="btn btn-default">POUND</button></li>
-              </ul>
+            <div class="dropdown">
+              <button class="dropbtn">USD <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+              <div class="dropdown-content">
+                <ul>
+                  <li><button type="button">USD</button></li>
+                  <li><button type="button">POUND</button></li>
+                </ul>
+              </div>
             </div>
           </div>
           <button type="button" class="btn-search"><i class="fas fa-search"></i></button>
@@ -82,10 +85,10 @@
               <a class="nav-link" routerLink="/contact-us">Contact Us</a>
             </li>
             <li class="nav-item">
-              <button class="nav-link mx-3 btn btn-info" (click)="openLogin()">Login</button>
+              <a class="nav-link mx-3 text-success" (click)="openLogin()">Login</a>
             </li>
             <li class="nav-item">
-              <button class="nav-link btn btn-success" (click)="openRegister()">Register</button>
+              <a class="nav-link text-info" (click)="openRegister()">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-cart-plus"></i><span class="cart">1</span></a>

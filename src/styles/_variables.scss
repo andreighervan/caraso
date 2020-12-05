@@ -1,12 +1,16 @@
 // colors
 
 $dark: #22292d;
+$dark2: #0a0a0a;
+$dark3: #212121;
 $orange: #e57632;
 $gray1: #111416;
 
 $theme-colors: (
   "orange": $orange,
   "dark": $dark,
+  "dark2": $dark2,
+  "dark3": $dark3,
   "gray": $gray1,
 ) !default;
 
@@ -15,6 +19,8 @@ $gray2: #ebeff0;
 $gray3: #343c40;
 $gray4: #ebeff0;
 $gray5: #aeaeae;
+$gray6: #e0e0e0;
+$gray7: #666666;
 
 $black1: #111416;
 
