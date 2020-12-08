@@ -25,15 +25,15 @@
 
         <div class="tab-content">
             <div id="all" class="tab-pane active">
-                <app-popular-car [cars]="cars$ | async" (loadMoreEvent)="reloadCars()">
+                <app-popular-car [cars]="cars" (loadMoreEvent)="loadCars()">
                 </app-popular-car>
             </div>
             <div id="new" class="tab-pane">
-                <app-popular-car [cars]="newCars$ | async" (loadMoreEvent)="reloadCars()">
+                <app-popular-car [cars]="newCars" (loadMoreEvent)="loadCars(NEW_CARS)">
                 </app-popular-car>
             </div>
             <div id="used" class="tab-pane">
-                <app-popular-car [cars]="usedCars$ | async" (loadMoreEvent)="reloadCars()">
+                <app-popular-car [cars]="usedCars" (loadMoreEvent)="loadCars(USED_CARS)">
                 </app-popular-car>
             </div>
         </div>
@@ -49,7 +49,7 @@
 <!-- Latest posts section -->
 <section class="posts py-60">
     <div class="container">
-        <h2 class="text-center font-italic bottom-img mt-n3">LATEST <span class="text-orange">POSTS</span></h2>
+        <h2 class="text-center mb-60 font-italic bottom-img mt-n3">LATEST <span class="text-orange">POSTS</span></h2>
         <app-posts></app-posts>
     </div>
 </section>

@@ -44,10 +44,10 @@ export class CarService {
     this.searchFiltersSubject$.next(car);
   }
 
-  loadAllCars(): Observable<ICar[]> {
+  loadAllCars(carOldNew = '', pageSize = 8): Observable<ICar[]> {
     return this.db.collection(
-      'cars'
-    )
+      'cars')
+      .limit(pageSize)
       .snapshotChanges()
       .pipe(
         map(snaps => convertSnaps<ICar>(snaps)),

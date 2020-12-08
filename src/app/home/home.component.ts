@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { finalize, map } from 'rxjs/operators';
 
 import { ICar } from '../core/models/Cars';
 import { CarService } from '../shared/services/car.service';
@@ -12,26 +12,47 @@ import { CarService } from '../shared/services/car.service';
 })
 export class HomeComponent implements OnInit {
 
-  cars$: Observable<ICar[]>;
-  newCars$: Observable<ICar[]>;
-  usedCars$: Observable<ICar[]>;
+  readonly NEW_CARS = 'New Cars';
+  readonly OLD_CARS = 'Old Cars';
+
+  cars: ICar[];
+  newCars: ICar[];
+  usedCars: ICar[];
+
+  lastPageLoaded = 0;
+  loading = false;
 
   constructor(private carsService: CarService) { }
 
   ngOnInit() {
-    this.reloadCars();
+    this.loading = true;
+
+    this.carsService.loadAllCars()
+      .pipe(
+        finalize(() => this.loading = false)
+      )
+      .subscribe(
+        cars => {
+          this.cars = cars,
+            this.newCars = cars.filter(
+              car => car.isNew === true),
+            this.usedCars = cars.filter(
+              car => car.isNew === false)
+        }
+      );
   }
 
-  reloadCars() {
-    this.cars$ = this.carsService.loadAllCars();
+  loadCars(carOldOrNew: string) {
+    this.lastPageLoaded++;
 
-    this.newCars$ = this.cars$.pipe(
-      map(cars => cars.filter(
-        car => car.isNew === true)));
+    this.loading = true;
 
-    this.usedCars$ = this.cars$.pipe(
-      map(cars => cars.filter(
-        car => car.isNew === false)));
+    this.carsService.loadAllCars(carOldOrNew,
+      this.lastPageLoaded)
+      .pipe(
+        finalize(() => this.loading = false)
+      )
+      .subscribe(cars => this.cars = this.cars.concat(cars));
   }
 
   // TODO TRACKBY

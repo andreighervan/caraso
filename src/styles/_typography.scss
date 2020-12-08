@@ -58,11 +58,12 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 3 !default;//48px
-$h2-font-size: $font-size-base * 2.25 !default;//36px
-$h3-font-size: $font-size-base * 1.87 !default;//30px
-$h4-font-size: $font-size-base * 1.5 !default;//24px
-$h5-font-size: $font-size-base * 1.12 !default;//18px
+$h1-font-size: $font-size-base * 3 !default; //48px
+$h2-font-size: $font-size-base * 2.25 !default; //36px
+$h3-font-size: $font-size-base * 1.87 !default; //30px
+$h4-font-size: $font-size-base * 1.5 !default; //24px
+$h5-font-size: $font-size-base * 1.12 !default; //18px
+$h6-font-size: $font-size-base * 0.875 !default; //14px
 
 $headings-margin-bottom: 0 !default;
 $headings-font-family: ProximaNovaBold !default;
@@ -71,17 +72,16 @@ $headings-font-weight: 700 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 
-$paragraph-margin-bottom:   0 !default;
+$paragraph-margin-bottom: 0 !default;
 
-$lead-font-size: $font-size-base !default;//16px
+$lead-font-size: $font-size-base !default; //16px
 
 p {
   font-family: OpenSansRegular;
 }
 
-h6{
-  line-height:1.9;
-  font-size:14px !important;
+h6 {
+  line-height: 1.9;
 }
 
 .bottom-img {
