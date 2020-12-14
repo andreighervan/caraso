@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+    this.afAuth.signInWithEmailAndPassword(email, password)
       .catch(error => {
         this.eventAuthError.next(error);
       })
@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   createUser(user) {
-    this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password)
+    this.afAuth.createUserWithEmailAndPassword(user.email, user.password)
       .then(userCredential => {
         this.newUser = user;
         userCredential.user.updateProfile({
@@ -64,8 +64,7 @@ export class AuthService {
   doFacebookLogin() {
     return new Promise<any>((resolve, reject) => {
       const provider = new firebase.auth.FacebookAuthProvider();
-      this.afAuth.auth
-        .signInWithPopup(provider)
+      this.afAuth.signInWithPopup(provider)
         .then(res => {
           resolve(res);
         }, err => {
@@ -80,8 +79,7 @@ export class AuthService {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('profile');
       provider.addScope('email');
-      this.afAuth.auth
-        .signInWithPopup(provider)
+      this.afAuth.signInWithPopup(provider)
         .then(res => {
           resolve(res);
         });
@@ -89,7 +87,7 @@ export class AuthService {
   }
 
   logout() {
-    return this.afAuth.auth.signOut();
+    return this.afAuth.signOut();
   }
 
 }

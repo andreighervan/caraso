@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sell-a-car.component.scss']
 })
 export class SellACarComponent implements OnInit {
-
+title='Sell '
   constructor() { }
 
   ngOnInit() {

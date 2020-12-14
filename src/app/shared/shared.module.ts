@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { RouterModule } from '@angular/router';
 
 import * as fromComponents from './components';
@@ -21,8 +20,6 @@ import { TagsWidgetComponent } from './components/tags-widget/tags-widget.compon
   declarations: [...fromComponents.components, FilterPipe, PopularPostsWidgetComponent, PopularPostComponent, ArchivesWidgetComponent, TagsWidgetComponent],
   imports: [
     CommonModule,
-    CarouselModule,
-    WavesModule,
     RouterModule,
     ReactiveFormsModule,
     MaterialModule,

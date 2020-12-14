@@ -12,8 +12,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SearchRoutingModule,
-    SharedModule,
-    NgbModule
+    SharedModule
   ]
 })
 export class SearchModule { }

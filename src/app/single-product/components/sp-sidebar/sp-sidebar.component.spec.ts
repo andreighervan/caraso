@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SpSidebarComponent } from './sp-sidebar.component';
 
@@ -6,7 +6,7 @@ describe('SpSidebarComponent', () => {
   let component: SpSidebarComponent;
   let fixture: ComponentFixture<SpSidebarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SpSidebarComponent ]
     })
