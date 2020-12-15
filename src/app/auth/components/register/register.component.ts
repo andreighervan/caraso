@@ -8,20 +8,15 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  title = 'Register';
   authError: any;
 
-  constructor(public dialogRef: MatDialogRef<RegisterComponent>,
-    private auth: AuthService) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
     this.auth.eventAuthError$.subscribe(data => {
       this.authError = data;
     });
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 
   createUser(frm) {

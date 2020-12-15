@@ -20,24 +20,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  openLogin(): void {
-    const dialogRef = this.dialog.open(LoginComponent, {
-      width: '30%',
-      height: 'auto'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
-
-  openRegister(): void {
-    const dialogRef = this.dialog.open(RegisterComponent, {
-      width: '30%',
-      height: 'auto'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
-  }
-
 }

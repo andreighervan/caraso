@@ -1,10 +1,10 @@
+<app-header></app-header>
+<app-breadcrumb [title]="title"></app-breadcrumb>
 <div class="register-modal">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-sm-4 col-sm-offset-4 my-5">
                 <h4>User Registration</h4>
-            </div>
-            <div class="col-sm-11 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Sign In</h5>
@@ -18,12 +18,14 @@
                             </div>
 
                             <div class="form-label-group">
-                                <input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control" id="firstName">
+                                <input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control"
+                                    id="firstName">
                                 <label for="firstName">First name</label>
                             </div>
 
                             <div class="form-label-group">
-                                <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control" id="lastName" value="">
+                                <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control"
+                                    id="lastName" value="">
                                 <label for="lastName">Last name</label>
                             </div>
 
@@ -51,7 +53,5 @@
             </div>
         </div>
     </div>
-    <div mat-dialog-actions>
-        <button mat-button class="btn-close" (click)="onNoClick()">x</button>
-    </div>
 </div>
+<app-footer></app-footer>

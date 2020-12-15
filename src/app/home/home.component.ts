@@ -13,7 +13,7 @@ import { CarService } from '../shared/services/car.service';
 export class HomeComponent implements OnInit {
 
   readonly NEW_CARS = true;
-  readonly OLD_CARS = false;
+  readonly USED_CARS = false;
 
   cars: ICar[];
   newCars: ICar[];
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  loadCars(carOldOrNew: boolean) {
+  loadCars(carOldOrNew: boolean=false) {
     this.lastPageLoaded++;
 
     this.loading = true;

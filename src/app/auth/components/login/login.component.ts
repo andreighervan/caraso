@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
 
@@ -9,11 +8,10 @@ import { User } from '../../models/user';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  title = 'Login';
   authError: any;
 
-  constructor(private auth: AuthService,
-              public dialogRef: MatDialogRef<LoginComponent>) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
     this.doErrorHandler();
@@ -21,10 +19,6 @@ export class LoginComponent implements OnInit {
 
   login(frm) {
     this.auth.login(frm.value.email, frm.value.password);
-  }
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 
   doErrorHandler() {
